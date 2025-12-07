@@ -3,33 +3,33 @@ import { ArrowUpRight, MapPin, Users, Zap, Heart } from 'lucide-react';
 
 const positions = [
     {
-        title: "Senior Computer Vision Engineer",
+        title: "Computer Vision Engineer",
         dept: "Engineering",
-        loc: "Philadelphia, PA",
+        loc: "Philly",
         type: "Full-Time"
     },
     {
-        title: "Robotics Deployment Specialist",
+        title: "Robotics Intern",
         dept: "Operations",
-        loc: "Remote / Travel",
+        loc: "Philly",
         type: "Full-Time"
     },
     {
-        title: "Full Stack Developer (React/Rust)",
+        title: "Full Stack Developer",
         dept: "Product",
-        loc: "Philadelphia, PA",
+        loc: "Philly / Remote",
         type: "Full-Time"
     },
     {
-        title: "Mechanical Design Engineer",
+        title: "Mechanical Intern",
         dept: "Hardware",
-        loc: "Philadelphia, PA",
+        loc: "Philly",
         type: "Full-Time"
     },
     {
-        title: "Technical Account Manager",
+        title: "Founder Office",
         dept: "Sales",
-        loc: "Remote",
+        loc: "Philly",
         type: "Full-Time"
     }
 ];
@@ -89,7 +89,7 @@ const Careers: React.FC = () => {
             <div>
                 <h2 className="text-3xl font-bold mb-4 text-white">Open Positions</h2>
                 <p className="text-slate-400 max-w-xl">
-                    Don't see your role? Email us at careers@scoutrobotics.com
+                    Like a role below? Email us with your resume at careers@scoutrobotics.com. Don't see one? Reach out & let's talk!
                 </p>
             </div>
         </div>

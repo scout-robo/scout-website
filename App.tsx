@@ -78,10 +78,10 @@ function App() {
                   </p>
                   <div className="flex flex-col sm:flex-row justify-center gap-4">
                       <button className="bg-scout-primary text-white px-10 py-4 font-bold text-lg hover:bg-blue-600 transition-all duration-300">
-                        SCHEDULE DEMO
+                        <a href="https://calendly.com/tejas-ag/30min" target="_blank" rel="noopener noreferrer">SCHEDULE DEMO</a>
                       </button>
                       <button className="bg-transparent border border-white/20 text-white px-10 py-4 font-bold text-lg hover:bg-white/5 transition-all duration-300">
-                        CONTACT SALES
+                        <a href="mailto:contact@scoutrobo.com" target="_blank" rel="noopener noreferrer">CONTACT SALES</a>
                       </button>
                   </div>
                </div>

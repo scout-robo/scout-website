@@ -112,7 +112,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
             <div className="hidden md:block">
               <button className="flex items-center gap-2 bg-white/10 text-white border border-white/20 px-3 py-2 lg:px-5 rounded-none font-bold hover:bg-white hover:text-black transition-all duration-300 group">
                 {/* Text hidden on Tablet, visible on Laptop+ */}
-                <span className="hidden lg:inline uppercase text-xs tracking-wider">Dashboard Login</span>
+                <span className="hidden lg:inline uppercase text-xs tracking-wider"><a href="https://app.scoutrobo.com" target="_blank" rel="noopener noreferrer">Dashboard Login</a></span>
                 <LogIn className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>

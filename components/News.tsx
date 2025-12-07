@@ -5,7 +5,7 @@ const newsItems = [
   {
     date: 'October 15, 2025',
     category: 'Product Launch',
-    title: 'Scout Robotics Unveils Gen-3 Sensor Pod with Thermal Imaging',
+    title: 'Scout Robotics Unveils SPARK - light weight & battery powered inspection system',
     excerpt: 'The latest generation of our hardware brings night-vision capabilities to automated track inspection.',
     image: 'https://images.unsplash.com/photo-1518112390430-f4ab02e9c2c8?q=80&w=2681&auto=format&fit=crop'
   },
@@ -17,9 +17,9 @@ const newsItems = [
     image: 'https://images.unsplash.com/photo-1574781440788-292323287389?q=80&w=2574&auto=format&fit=crop'
   },
   {
-    date: 'August 10, 2025',
+    date: 'September 10, 2025',
     category: 'Company',
-    title: 'Scout Robotics Opens New HQ in Philadelphia',
+    title: 'Scout Robotics moves HQ inside Philadelphia',
     excerpt: 'To support our growing engineering team, we have moved to a dedicated facility in the Navy Yard.',
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop'
   }

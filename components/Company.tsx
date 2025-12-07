@@ -3,45 +3,45 @@ import { Linkedin } from 'lucide-react';
 
 const teamMembers = [
     {
-        name: "Founder Name",
+        name: "Tejas Agarwal",
         role: "Chief Executive Officer",
         image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2574&auto=format&fit=crop",
-        bio: "Former Transit Director with 15 years experience in rail operations."
+        bio: "2x startup founder, roboticist, University of Pennsylvania, DTU."
     },
     {
-        name: "Co-Founder Name",
+        name: "Arjun Nanda",
         role: "CTO",
         image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2670&auto=format&fit=crop",
-        bio: "PhD in Computer Vision from MIT. Previously at Google X."
-    },
-    {
-        name: "Lead Engineer",
-        role: "VP of Engineering",
-        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2576&auto=format&fit=crop",
-        bio: "Robotics architect specializing in edge computing constraints."
-    },
-    {
-        name: "Head of Operations",
-        role: "VP of Operations",
-        image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2661&auto=format&fit=crop",
-        bio: "Scaled logistics for major freight networks across North America."
+        bio: "Repeat founder, AI expert, ex-tortuga, ex-airworks, University of Pennsylvania."
     }
+    // {
+    //     name: "Lead Engineer",
+    //     role: "VP of Engineering",
+    //     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2576&auto=format&fit=crop",
+    //     bio: "Robotics architect specializing in edge computing constraints."
+    // },
+    // {
+    //     name: "Head of Operations",
+    //     role: "VP of Operations",
+    //     image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2661&auto=format&fit=crop",
+    //     bio: "Scaled logistics for major freight networks across North America."
+    // }
 ];
 
 const advisors = [
     {
-        name: "Advisor Name",
-        role: "Former CEO, Major Rail Corp",
+        name: "Raymond T Betler",
+        role: "Former Wabtec CEO, Chairman LB Foster",
         image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=2574&auto=format&fit=crop"
     },
     {
-        name: "Advisor Name",
-        role: "Safety Board Member",
+        name: "Leslie S Richards",
+        role: "Former GM SEPTA, Former PA Secretary of Transportation, PROF UPenn",
         image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2574&auto=format&fit=crop"
     },
     {
-        name: "Advisor Name",
-        role: "AI Research Fellow",
+        name: "Randell Iwasaki",
+        role: "Former Caltrans Director, Former CEO Contra Costa Transportation Authority",
         image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=2670&auto=format&fit=crop"
     }
 ];
@@ -66,10 +66,10 @@ export const AboutUs: React.FC = () => {
                     <div>
                         <h2 className="text-3xl font-bold text-white mb-6">Born from the Rails</h2>
                         <p className="text-slate-400 leading-relaxed mb-6">
-                            Scout Robotics was founded by a team of transit engineers and roboticists who saw a fundamental problem: infrastructure maintenance is reactive, dangerous, and outdated.
+                            Scout Robotics Inc. (Formerly Sahay AI, Inc.) was founded by a team of passionate robotics engineers and transit experts who saw a fundamental problem: infrastructure maintenance is reactive, dangerous, and outdated.
                         </p>
                         <p className="text-slate-400 leading-relaxed">
-                            We realized that specialized inspection vehicles were too expensive and infrequent. The solution wasn't to build more inspection cars, but to turn the thousands of trains and trucks already moving into inspectors.
+                            We realized that specialized inspection vehicles and manual methods were too infrequent, expensive and prone to mistakes. The solution wasn't to build more inspection cars, but to turn the thousands of trains and trucks already moving into inspectors.
                         </p>
                     </div>
                     <div className="relative h-80 rounded-2xl overflow-hidden shadow-2xl border border-white/10">
