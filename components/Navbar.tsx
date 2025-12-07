@@ -69,8 +69,8 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
             onClick={() => { onNavigate('home'); window.scrollTo(0,0); setIsMobileMenuOpen(false); }}
             className="flex items-center gap-3 cursor-pointer group shrink-0 relative z-50"
           >
-            {/* OPTION 1: IMAGE LOGO (Uncomment the line below and add your image path) */}
-            {/* <img src="/path/to/your/logo.png" alt="Scout Robotics Logo" className="h-8 md:h-10 w-auto" /> */}
+            {/* OPTION 1: IMAGE LOGO (Uncomment the line below to use your logo image) */}
+            {/* <img src={LOGO_PATH} alt="Scout Robotics Logo" className="h-8 md:h-10 w-auto" /> */}
 
             {/* OPTION 2: TEXT + ICON LOGO */}
             <>
@@ -112,7 +112,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
             <div className="hidden md:block">
               <button className="flex items-center gap-2 bg-white/10 text-white border border-white/20 px-3 py-2 lg:px-5 rounded-none font-bold hover:bg-white hover:text-black transition-all duration-300 group">
                 {/* Text hidden on Tablet, visible on Laptop+ */}
-                <span className="hidden lg:inline uppercase text-xs tracking-wider"><a href="https://app.scoutrobo.com" target="_blank" rel="noopener noreferrer">Dashboard Login</a></span>
+                <span className="hidden lg:inline uppercase text-xs tracking-wider"><a href="https://app.scoutrobo.com">Dashboard Login</a></span>
                 <LogIn className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>

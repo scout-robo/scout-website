@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Settings, Cpu, Cloud, Smartphone, Box, Zap, Wifi } from 'lucide-react';
+import { PRODUCT_IMAGES } from '../src/constants/images';
 
 const SystemArchitecture: React.FC = () => {
   const [activeStep, setActiveStep] = useState<number>(0);
@@ -48,7 +49,7 @@ const SystemArchitecture: React.FC = () => {
       detailTitle: 'Autonomous Digitization',
       detailContent: (
         <div className="relative h-full w-full overflow-hidden bg-black/50">
-             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-center opacity-40"></div>
+             <div className={`absolute inset-0 bg-cover bg-center opacity-40`} style={{backgroundImage: `url(${PRODUCT_IMAGES.BACKGROUND})`}}></div>
              {/* Scanning Effect */}
              <div className="absolute inset-0 bg-gradient-to-b from-scout-primary/10 to-transparent animate-scan z-10 border-b-2 border-scout-primary shadow-[0_0_15px_rgba(59,130,246,0.5)]"></div>
              

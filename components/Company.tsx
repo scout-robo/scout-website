@@ -1,17 +1,18 @@
 import React, { useEffect } from 'react';
 import { Linkedin } from 'lucide-react';
+import { TEAM_IMAGES, ADVISOR_IMAGES, COMPANY_IMAGES } from '../src/constants/images';
 
 const teamMembers = [
     {
         name: "Tejas Agarwal",
         role: "Chief Executive Officer",
-        image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2574&auto=format&fit=crop",
+        image: TEAM_IMAGES.TEJAS_AGARWAL,
         bio: "2x startup founder, roboticist, University of Pennsylvania, DTU."
     },
     {
         name: "Arjun Nanda",
         role: "CTO",
-        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2670&auto=format&fit=crop",
+        image: TEAM_IMAGES.ARJUN_NANDA,
         bio: "Repeat founder, AI expert, ex-tortuga, ex-airworks, University of Pennsylvania."
     }
     // {
@@ -32,17 +33,17 @@ const advisors = [
     {
         name: "Raymond T Betler",
         role: "Former Wabtec CEO, Chairman LB Foster",
-        image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=2574&auto=format&fit=crop"
+        image: ADVISOR_IMAGES.RAYMOND_BETLER
     },
     {
         name: "Leslie S Richards",
         role: "Former GM SEPTA, Former PA Secretary of Transportation, PROF UPenn",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2574&auto=format&fit=crop"
+        image: ADVISOR_IMAGES.LESLIE_RICHARDS
     },
     {
         name: "Randell Iwasaki",
         role: "Former Caltrans Director, Former CEO Contra Costa Transportation Authority",
-        image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=2670&auto=format&fit=crop"
+        image: ADVISOR_IMAGES.RANDELL_IWASAKI
     }
 ];
 
@@ -74,7 +75,7 @@ export const AboutUs: React.FC = () => {
                     </div>
                     <div className="relative h-80 rounded-2xl overflow-hidden shadow-2xl border border-white/10">
                          <img 
-                            src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?q=80&w=2670&auto=format&fit=crop" 
+                            src={COMPANY_IMAGES.OFFICE} 
                             alt="Team working on robot" 
                             className="absolute inset-0 w-full h-full object-cover"
                          />

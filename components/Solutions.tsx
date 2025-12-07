@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { CheckCircle2 } from 'lucide-react';
+import { SOLUTION_IMAGES } from '../src/constants/images';
 
 const SolutionLayout: React.FC<{ 
     title: string; 
@@ -58,7 +59,7 @@ export const AutomatedInspection: React.FC = () => (
     <SolutionLayout
         title="Automated Inspection"
         subtitle="Replace manual track walks with continuous, high-fidelity data collection from revenue vehicles."
-        bgImage="https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=80&w=2684&auto=format&fit=crop"
+        bgImage={SOLUTION_IMAGES.SOLUTION_BG_1}
         features={['Track Geometry (Gauge, Cross-level)', 'Visual Defect Detection', 'Thermal Anomaly Detection', 'Tunnel & Clearance Mapping']}
     >
         <h3>The Challenge of Manual Inspection</h3>
@@ -70,8 +71,8 @@ export const AutomatedInspection: React.FC = () => (
             Scout Robotics changes the paradigm by mounting autonomous sensor pods on your existing fleet. Every time a train runs, it inspects the track. This provides a daily health check of your entire network, allowing you to catch defects the moment they form.
         </p>
         <div className="my-8 grid grid-cols-2 gap-4">
-            <img src="https://images.unsplash.com/photo-1596734341907-742918820c75?q=80&w=2669&auto=format&fit=crop" className="rounded-lg opacity-80" />
-            <img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?q=80&w=2670&auto=format&fit=crop" className="rounded-lg opacity-80" />
+            <img src={SOLUTION_IMAGES.SOLUTION_1} className="rounded-lg opacity-80" />
+            <img src={SOLUTION_IMAGES.SOLUTION_2} className="rounded-lg opacity-80" />
         </div>
     </SolutionLayout>
 );
@@ -80,7 +81,7 @@ export const EdgeSoftware: React.FC = () => (
     <SolutionLayout
         title="Edge AI Software"
         subtitle="Process terabytes of sensor data in milliseconds. Detect faults instantly, without waiting for the cloud."
-        bgImage="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2670&auto=format&fit=crop"
+        bgImage={SOLUTION_IMAGES.SOLUTION_BG_2}
         features={['Zero-Latency Inference', 'Offline Operation', 'Bandwidth Optimization', 'OTA Model Updates']}
     >
         <h3>Why Edge Computing Matters</h3>
@@ -101,7 +102,7 @@ export const CloudDashboard: React.FC = () => (
     <SolutionLayout
         title="Scout Command Center"
         subtitle="A unified view of your infrastructure health. Move from reactive fixes to predictive maintenance."
-        bgImage="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop"
+        bgImage={SOLUTION_IMAGES.SOLUTION_BG_3}
         features={['GIS Map Visualization', 'Predictive Trend Analysis', 'Work Order Integration', 'Historical Replay']}
     >
         <h3>Turn Data into Action</h3>

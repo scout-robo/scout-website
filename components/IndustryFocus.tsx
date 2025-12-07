@@ -1,13 +1,14 @@
 import React from 'react';
 import { IndustryType, Industry } from '../types';
 import { Train, Truck, Plane, Building2, ChevronRight } from 'lucide-react';
+import { INDUSTRY_IMAGES } from '../src/constants/images';
 
 const industries: Industry[] = [
   {
     id: IndustryType.RAIL,
     name: 'Rail & Transit',
     label: 'RAIL',
-    image: 'https://images.unsplash.com/photo-1555529902-5261145633bf?q=80&w=2670&auto=format&fit=crop',
+    image: INDUSTRY_IMAGES.RAIL,
     description: 'Automate track geometry and visual inspection on revenue trains.',
     insights: ['Broken Fasteners', 'Gauge Width', 'Vegetation', 'Ballast Health']
   },
@@ -15,7 +16,7 @@ const industries: Industry[] = [
     id: IndustryType.ROADS,
     name: 'Highways',
     label: 'HWY',
-    image: 'https://images.unsplash.com/photo-1565626424177-8c595d24b2e6?q=80&w=2670&auto=format&fit=crop',
+    image: INDUSTRY_IMAGES.ROADS,
     description: 'Map pavement condition and inventory assets at highway speeds.',
     insights: ['Potholes', 'Cracking Index', 'Signage Inventory', 'Lane Marking']
   },
@@ -23,7 +24,7 @@ const industries: Industry[] = [
     id: IndustryType.AIRPORTS,
     name: 'Aviation',
     label: 'AIR',
-    image: 'https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?q=80&w=2670&auto=format&fit=crop',
+    image: INDUSTRY_IMAGES.AIRPORTS,
     description: 'Keep runways FOD-free and compliant with daily scans.',
     insights: ['FOD Detection', 'Runway Cracks', 'Lighting Status', 'Perimeter Check']
   },
@@ -31,7 +32,7 @@ const industries: Industry[] = [
     id: IndustryType.CITIES,
     name: 'Urban',
     label: 'CITY',
-    image: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?q=80&w=2670&auto=format&fit=crop',
+    image: INDUSTRY_IMAGES.CITIES,
     description: 'Digitize city infrastructure for smarter maintenance planning.',
     insights: ['Utility Poles', 'Curb Assets', 'Road Surface', 'Encroachment']
   }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Zap, Shield, Database, Clock } from 'lucide-react';
+import { FEATURE_IMAGES } from '../src/constants/images';
 
 const Features: React.FC = () => {
   return (
@@ -18,7 +19,7 @@ const Features: React.FC = () => {
           {/* Card 1: Velocity (Large) */}
           <div className="lg:col-span-2 row-span-1 bg-gradient-to-r from-blue-900 to-slate-900 rounded-2xl overflow-hidden relative group border border-white/10">
             <img 
-                src="https://images.unsplash.com/photo-1535535112387-56ffe8db21ff?q=80&w=2670&auto=format&fit=crop" 
+                src={FEATURE_IMAGES.FEATURE_1} 
                 alt="High Speed Train" 
                 className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700"
             />
@@ -79,7 +80,7 @@ const Features: React.FC = () => {
           {/* Card 4: Delays (Large) */}
           <div className="lg:col-span-2 row-span-1 bg-gradient-to-r from-orange-900 to-slate-900 rounded-2xl overflow-hidden relative group border border-white/10">
              <img 
-                src="https://images.unsplash.com/photo-1596734341907-742918820c75?q=80&w=2669&auto=format&fit=crop" 
+                src={FEATURE_IMAGES.FEATURE_2} 
                 alt="Construction Worker" 
                 className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-700"
             />

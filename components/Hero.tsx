@@ -1,5 +1,6 @@
 import React from 'react';
 import { Play, Activity, Wifi, Zap, CheckCircle2, Calendar } from 'lucide-react';
+import { HERO_IMAGES } from '../src/constants/images';
 
 const Hero: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ const Hero: React.FC = () => {
             muted 
             playsInline 
             className="w-full h-full object-cover opacity-60 scale-105"
-            poster="https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=80&w=2684&auto=format&fit=crop"
+            poster={HERO_IMAGES.VIDEO_POSTER}
          >
              <source src="https://videos.pexels.com/video-files/855018/855018-hd_1920_1080_30fps.mp4" type="video/mp4" />
          </video>
@@ -50,11 +51,11 @@ const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-5">
             <button className="flex items-center justify-center gap-3 bg-scout-primary hover:bg-blue-600 text-white px-8 py-4 font-bold text-lg rounded-lg transition-all shadow-xl shadow-scout-primary/20 hover:scale-105">
               <Calendar className="w-5 h-5" />
-              <a href="https://calendly.com/tejas-ag/30min" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 bg-scout-primary hover:bg-blue-600 text-white px-8 py-4 font-bold text-lg rounded-lg transition-all shadow-xl shadow-scout-primary/20 hover:scale-105">Book A Demo</a>
+              <a href="https://calendly.com/tejas-ag/30min" >Book A Demo</a>
             </button>
             <button className="flex items-center justify-center gap-3 bg-white/5 hover:bg-white/10 text-white border border-white/10 px-8 py-4 font-bold text-lg rounded-lg transition-all backdrop-blur-sm group">
               <Play className="w-5 h-5 fill-current" />
-              <a href="https://www.youtube.com/@ScoutRobo" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 bg-white/5 hover:bg-white/10 text-white border border-white/10 px-8 py-4 font-bold text-lg rounded-lg transition-all backdrop-blur-sm group">
+              <a href="https://www.youtube.com/@ScoutRobo">
               See It In Action </a>
             </button>
           </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Scan, Cpu, Eye, Wifi, Zap, Layers } from 'lucide-react';
+import { TECHNOLOGY_IMAGES } from '../src/constants/images';
 
 const Technology: React.FC = () => {
   return (
@@ -19,7 +20,7 @@ const Technology: React.FC = () => {
              <div className="order-2 md:order-1 relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
                 <div className="absolute inset-0 bg-scout-primary/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
                 <img 
-                    src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2670&auto=format&fit=crop" 
+                    src={TECHNOLOGY_IMAGES.TECH_1} 
                     alt="Scout Sensor Pod Hardware" 
                     className="w-full h-[400px] object-cover"
                 />
@@ -106,7 +107,7 @@ const Technology: React.FC = () => {
                  <div className="absolute inset-0 bg-gradient-to-tr from-scout-primary/20 to-transparent z-10"></div>
                  {/* Abstract representation of AI processing */}
                  <img 
-                    src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2565&auto=format&fit=crop" 
+                    src={TECHNOLOGY_IMAGES.TECH_2} 
                     alt="AI Processing Visualization" 
                     className="w-full h-[400px] object-cover opacity-80"
                 />
