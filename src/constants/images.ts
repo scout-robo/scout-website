@@ -33,8 +33,8 @@ export const ADVISOR_IMAGES = {
 // News Items
 export const NEWS_IMAGES = {
   PRODUCT_LAUNCH: '/images/news/product-launch.jpg',
-  PARTNERSHIP: '/images/news/partnership.jpg',
-  COMPANY_UPDATE: '/images/news/company-update.jpg',
+  PARTNERSHIP: '/images/news/product-launch.jpg',
+  COMPANY_UPDATE: '/images/news/company.jpg',
 } as const;
 
 // Industries
@@ -75,7 +75,11 @@ export const TECHNOLOGY_IMAGES = {
 
 // Product Deep Dive
 export const PRODUCT_IMAGES = {
-  BACKGROUND: '/images/features/product-bg.jpg',
+  BACKGROUND: '/images/products/product-bg.png',
+  LARRE: '/images/products/larre.png',
+  FORGE: '/images/products/forge.png',
+  SPARK: '/images/products/spark.png',
+  DASHBOARD_MAP: '/images/products/dashboard-map.png',
 } as const;
 
 // Company Section

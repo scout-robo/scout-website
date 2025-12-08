@@ -14,7 +14,7 @@ const allNewsArticles = [
     category: 'Company',
     title: 'Sahay AI changes name to Scout Robotics',
     excerpt: 'We are excited to announce our pilot program bringing daily automated inspection to the metro area.',
-    image: NEWS_IMAGES.PARTNERSHIP,
+    image: NEWS_IMAGES.COMPANY_UPDATE,
     readTime: '4 min read',
     content: `Sahay AI is excited to announce that we are rebranding to Scout Robotics, reflecting our evolution from an AI software provider to a full-stack robotics company dedicated to revolutionizing infrastructure inspection. Our new name embodies our commitment to building autonomous systems that enable industrial networks to inspect themselves, enhancing safety and efficiency.
     

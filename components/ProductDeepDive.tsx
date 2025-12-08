@@ -10,33 +10,50 @@ const SystemArchitecture: React.FC = () => {
       id: 0,
       title: 'Mount',
       icon: Settings,
-      description: 'Attach sensor pods to any revenue vehicle.',
+      description: 'Attach Scout pods to any revenue vehicle.',
       detailTitle: 'Hardware Suite',
       detailContent: (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 h-full p-8">
-            <div className="bg-black/40 rounded-xl p-6 border border-white/10 flex flex-col items-center text-center hover:border-scout-primary/50 transition-colors">
-                <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mb-4">
-                    <Box className="w-6 h-6 text-blue-400" />
+        <div className="h-full flex flex-col">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-8 flex-1">
+                <div className="bg-black/40 rounded-xl p-6 border border-white/10 flex flex-col hover:border-scout-primary/50 transition-colors">
+                    <div className="flex flex-col items-center text-center mb-4">
+                        <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mb-4">
+                            <Box className="w-6 h-6 text-blue-400" />
+                        </div>
+                        <h4 className="text-white font-bold text-lg mb-1">LARRE</h4>
+                        <div className="text-xs font-mono text-slate-400 mb-3">LIDAR + VISION</div>
+                        <p className="text-slate-400 text-sm mb-4">High-fidelity geometry and visual inspection unit. Mounts on bumpers or undercarriages.</p>
+                    </div>
+                    <div className="mt-auto bg-black/60 rounded-lg p-3 border border-white/5">
+                        <img src={PRODUCT_IMAGES.LARRE} alt="LARRE Hardware" className="w-full h-32 object-contain" />
+                    </div>
                 </div>
-                <h4 className="text-white font-bold text-lg mb-1">Larre</h4>
-                <div className="text-xs font-mono text-slate-400 mb-3">LIDAR + VISION</div>
-                <p className="text-slate-400 text-sm">High-fidelity geometry and visual inspection unit. Mounts on bumpers or undercarriages.</p>
-            </div>
-            <div className="bg-black/40 rounded-xl p-6 border border-white/10 flex flex-col items-center text-center hover:border-scout-primary/50 transition-colors">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mb-4">
-                    <Cpu className="w-6 h-6 text-purple-400" />
+                <div className="bg-black/40 rounded-xl p-6 border border-white/10 flex flex-col hover:border-scout-primary/50 transition-colors">
+                    <div className="flex flex-col items-center text-center mb-4">
+                        <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mb-4">
+                            <Cpu className="w-6 h-6 text-purple-400" />
+                        </div>
+                        <h4 className="text-white font-bold text-lg mb-1">FORGE</h4>
+                        <div className="text-xs font-mono text-slate-400 mb-3">EDGE COMPUTE</div>
+                        <p className="text-slate-400 text-sm mb-4">Ruggedized AI processing core. Analyzes terabytes of sensor data in real-time.</p>
+                    </div>
+                    <div className="mt-auto bg-black/60 rounded-lg p-3 border border-white/5">
+                        <img src={PRODUCT_IMAGES.FORGE} alt="FORGE Hardware" className="w-full h-32 object-contain" />
+                    </div>
                 </div>
-                <h4 className="text-white font-bold text-lg mb-1">Forge</h4>
-                <div className="text-xs font-mono text-slate-400 mb-3">EDGE COMPUTE</div>
-                <p className="text-slate-400 text-sm">Ruggedized AI processing core. Analyzes terabytes of sensor data in real-time.</p>
-            </div>
-            <div className="bg-black/40 rounded-xl p-6 border border-white/10 flex flex-col items-center text-center hover:border-scout-primary/50 transition-colors">
-                <div className="w-12 h-12 bg-amber-500/20 rounded-full flex items-center justify-center mb-4">
-                    <Wifi className="w-6 h-6 text-amber-400" />
+                <div className="bg-black/40 rounded-xl p-6 border border-white/10 flex flex-col hover:border-scout-primary/50 transition-colors">
+                    <div className="flex flex-col items-center text-center mb-4">
+                        <div className="w-12 h-12 bg-amber-500/20 rounded-full flex items-center justify-center mb-4">
+                            <Wifi className="w-6 h-6 text-amber-400" />
+                        </div>
+                        <h4 className="text-white font-bold text-lg mb-1">SPARK</h4>
+                        <div className="text-xs font-mono text-slate-400 mb-3">CONNECTIVITY</div>
+                        <p className="text-slate-400 text-sm mb-4">Multi-modem gateway ensures data upload via 5G/LTE/Satellite seamlessly.</p>
+                    </div>
+                    <div className="mt-auto bg-black/60 rounded-lg p-3 border border-white/5">
+                        <img src={PRODUCT_IMAGES.SPARK} alt="SPARK Hardware" className="w-full h-32 object-contain" />
+                    </div>
                 </div>
-                <h4 className="text-white font-bold text-lg mb-1">Spark</h4>
-                <div className="text-xs font-mono text-slate-400 mb-3">CONNECTIVITY</div>
-                <p className="text-slate-400 text-sm">Multi-modem gateway ensures data upload via 5G/LTE/Satellite seamlessly.</p>
             </div>
         </div>
       )
@@ -74,17 +91,25 @@ const SystemArchitecture: React.FC = () => {
       description: 'Data syncs to the cloud for deep analytics.',
       detailTitle: 'Scout Command Center',
       detailContent: (
-        <div className="h-full w-full bg-[#1E293B] flex flex-col">
+        <div className="h-full w-full bg-[#1E293B] flex flex-col relative">
             <div className="bg-[#0F172A] px-4 py-3 border-b border-slate-700 flex justify-between items-center">
                 <div className="flex gap-1.5">
                     <div className="w-2 h-2 rounded-full bg-slate-600"></div>
                     <div className="w-2 h-2 rounded-full bg-slate-600"></div>
                     <div className="w-2 h-2 rounded-full bg-slate-600"></div>
                 </div>
-                <div className="text-slate-500 font-mono text-[10px]">app.scoutrobotics.com</div>
+                <div className="text-slate-500 font-mono text-[10px]">app.scoutrobo.com</div>
             </div>
-            <div className="flex-1 bg-[url('https://api.mapbox.com/styles/v1/mapbox/dark-v10/static/-122.4194,37.7749,12,0/800x400?access_token=pk.eyJ1IjoiZXhhbXBsZSIsImEiOiJjbGhzcCJ9')] bg-cover bg-center relative">
-                <div className="absolute top-4 right-4 bg-slate-900/90 backdrop-blur p-4 rounded border border-slate-700 w-64 shadow-xl">
+            <div className="flex-1 relative bg-slate-900">
+                {/* Static Map Background */}
+                <img 
+                    src={PRODUCT_IMAGES.DASHBOARD_MAP} 
+                    alt="Dashboard Map View" 
+                    className="absolute inset-0 w-full h-full object-cover opacity-60"
+                />
+                
+                {/* Overlay Elements */}
+                <div className="absolute top-4 right-4 bg-slate-900/90 backdrop-blur p-4 rounded border border-slate-700 w-64 shadow-xl z-10">
                     <div className="text-xs font-bold text-white mb-3 uppercase tracking-wider">Asset Health Score</div>
                     <div className="w-full bg-slate-700 h-2 rounded-full overflow-hidden mb-2">
                         <div className="w-[85%] h-full bg-green-500"></div>
@@ -95,9 +120,10 @@ const SystemArchitecture: React.FC = () => {
                     </div>
                 </div>
                 
-                {/* Pins */}
+                {/* Defect Pins */}
                 <div className="absolute top-1/3 left-1/4 w-3 h-3 bg-red-500 rounded-full border-2 border-white shadow-lg animate-bounce"></div>
                 <div className="absolute top-1/2 left-1/2 w-3 h-3 bg-yellow-500 rounded-full border-2 border-white shadow-lg"></div>
+                <div className="absolute bottom-1/3 right-1/3 w-3 h-3 bg-orange-500 rounded-full border-2 border-white shadow-lg"></div>
             </div>
         </div>
       )
@@ -109,24 +135,72 @@ const SystemArchitecture: React.FC = () => {
       description: 'Field crews get instant alerts on the mobile app.',
       detailTitle: 'Real-Time Mobile Alerts',
       detailContent: (
-        <div className="h-full w-full flex items-center justify-center bg-[#0B1120] relative overflow-hidden">
+        <div className="h-full w-full flex items-center justify-center bg-[#0B1120] relative overflow-hidden p-8">
             <div className="absolute inset-0 bg-gradient-to-tr from-scout-primary/10 to-transparent"></div>
-            <div className="relative w-48 h-[280px] bg-black rounded-[2rem] border-4 border-slate-800 shadow-2xl overflow-hidden transform rotate-[-5deg] hover:rotate-0 transition-transform duration-500">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-4 bg-slate-800 rounded-b-xl z-20"></div>
-                <div className="pt-8 px-4 h-full bg-slate-900">
-                    <div className="bg-red-500/20 border border-red-500 rounded-lg p-3 mb-2">
-                        <div className="text-[10px] text-red-400 font-bold mb-1">CRITICAL ALERT</div>
-                        <div className="text-xs text-white">Track Buckle Detected</div>
+            
+            {/* Connection Flow Diagram */}
+            <div className="relative w-full max-w-4xl flex items-center justify-between gap-8">
+                {/* Scout Pod */}
+                <div className="flex flex-col items-center relative z-10">
+                    <div className="w-24 h-24 bg-blue-500/20 rounded-xl border-2 border-blue-500 flex items-center justify-center mb-2 shadow-lg shadow-blue-500/20">
+                        <Settings className="w-12 h-12 text-blue-400" />
                     </div>
-                    <div className="bg-slate-800 rounded-lg p-3 mb-2">
-                        <div className="text-[10px] text-slate-400 font-bold mb-1">TASK ASSIGNED</div>
-                        <div className="text-xs text-white">Verify MP 102.4</div>
-                    </div>
-                    <div className="bg-slate-800 rounded-lg p-3">
-                        <div className="text-[10px] text-slate-400 font-bold mb-1">TASK ASSIGNED</div>
-                        <div className="text-xs text-white">Clear Vegetation</div>
-                    </div>
+                    <div className="text-xs font-mono text-slate-400 text-center">Scout Pod</div>
+                    <div className="text-[10px] text-slate-600 mt-1">On Vehicle</div>
                 </div>
+
+                {/* Connection Line 1 */}
+                <div className="flex-1 flex items-center relative">
+                    <div className="w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 relative">
+                        <div className="absolute top-1/2 left-0 w-2 h-2 bg-blue-500 rounded-full -translate-y-1/2 animate-ping"></div>
+                    </div>
+                    <div className="absolute top-[-20px] left-1/2 -translate-x-1/2 text-[10px] font-mono text-slate-500 bg-[#0B1120] px-2">5G/LTE</div>
+                </div>
+
+                {/* Cloud Dashboard */}
+                <div className="flex flex-col items-center relative z-10">
+                    <div className="w-24 h-24 bg-purple-500/20 rounded-xl border-2 border-purple-500 flex items-center justify-center mb-2 shadow-lg shadow-purple-500/20">
+                        <Cloud className="w-12 h-12 text-purple-400" />
+                    </div>
+                    <div className="text-xs font-mono text-slate-400 text-center">Cloud</div>
+                    <div className="text-[10px] text-slate-600 mt-1">Analytics</div>
+                </div>
+
+                {/* Connection Line 2 */}
+                <div className="flex-1 flex items-center relative">
+                    <div className="w-full h-0.5 bg-gradient-to-r from-purple-500 to-green-500 relative">
+                        <div className="absolute top-1/2 right-0 w-2 h-2 bg-green-500 rounded-full -translate-y-1/2 animate-ping"></div>
+                    </div>
+                    <div className="absolute top-[-20px] left-1/2 -translate-x-1/2 text-[10px] font-mono text-slate-500 bg-[#0B1120] px-2">Push Alert</div>
+                </div>
+
+                {/* Mobile App */}
+                <div className="flex flex-col items-center relative z-10">
+                    <div className="relative w-20 h-[120px] bg-black rounded-[1rem] border-2 border-green-500 shadow-2xl shadow-green-500/20 overflow-hidden">
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-2 bg-slate-800 rounded-b-lg z-20"></div>
+                        <div className="pt-4 px-2 h-full bg-gradient-to-b from-slate-900 to-black">
+                            <div className="bg-red-500/20 border border-red-500 rounded p-1 mb-1">
+                                <div className="text-[6px] text-red-400 font-bold mb-0.5">CRITICAL</div>
+                                <div className="text-[7px] text-white">Track Buckle</div>
+                            </div>
+                            <div className="bg-slate-800 rounded p-1 mb-1">
+                                <div className="text-[6px] text-slate-400">TASK</div>
+                                <div className="text-[7px] text-white">Verify MP 102</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="text-xs font-mono text-slate-400 text-center mt-2">Mobile App</div>
+                    <div className="text-[10px] text-slate-600 mt-1">Field Crew</div>
+                </div>
+            </div>
+            
+            {/* Data Flow Animation Indicators */}
+            <div className="absolute top-4 right-4 bg-black/60 backdrop-blur border border-white/10 rounded-lg p-3">
+                <div className="flex items-center gap-2 mb-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                    <span className="text-[10px] text-green-400 font-mono">SYSTEM ACTIVE</span>
+                </div>
+                <div className="text-[9px] text-slate-500 font-mono">Real-time sync enabled</div>
             </div>
         </div>
       )

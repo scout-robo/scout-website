@@ -9,26 +9,40 @@ interface NewsProps {
 
 const newsItems = [
   {
-    date: 'October 15, 2025',
-    category: 'Product Launch',
-    title: 'Scout Robotics Unveils SPARK - light weight & battery powered inspection system',
-    excerpt: 'The latest generation of our hardware brings night-vision capabilities to automated track inspection.',
-    image: NEWS_IMAGES.PRODUCT_LAUNCH
-  },
-  {
-    date: 'September 22, 2025',
-    category: 'Partnership',
-    title: 'Partnering with MetroLink to Digitize 400 Miles of Rail',
+        date: 'November 22, 2025',
+    category: 'Company',
+    title: 'Sahay AI changes name to Scout Robotics',
     excerpt: 'We are excited to announce our pilot program bringing daily automated inspection to the metro area.',
-    image: NEWS_IMAGES.PARTNERSHIP
-  },
+    image: NEWS_IMAGES.COMPANY_UPDATE,
+    readTime: '4 min read',
+    content: `Sahay AI is excited to announce that we are rebranding to Scout Robotics, reflecting our evolution from an AI software provider to a full-stack robotics company dedicated to revolutionizing infrastructure inspection. Our new name embodies our commitment to building autonomous systems that enable industrial networks to inspect themselves, enhancing safety and efficiency.
+    
+    The rebranding comes alongside significant milestones, including the launch of our SPARK inspection system and expanded partnerships with major transit agencies. "Scout Robotics captures the essence of our mission to explore new frontiers in infrastructure autonomy," said Arjun Nanda, CTO. "We're thrilled to embark on this next chapter."`
+},
+{
+  date: 'October 1, 2025',
+  category: 'Product Launch',
+  title: 'Scout Robotics Unveils SPARK - light weight & battery powered inspection system',
+  excerpt: 'The latest generation of our hardware brings night-vision capabilities to automated track inspection.',
+  image: NEWS_IMAGES.PRODUCT_LAUNCH,
+  readTime: '3 min read',
+  content: `Scout Robotics is proud to announce the launch of SPARK, our next-generation lightweight and battery-powered inspection system. This breakthrough technology enables railways and transit agencies to conduct comprehensive infrastructure inspections with unprecedented flexibility and efficiency.
+
+SPARK represents a significant advancement in our mission to make infrastructure inspection accessible, affordable, and continuous. The system's battery-powered design eliminates the need for complex vehicle integrations, allowing for rapid deployment across diverse fleet types.
+
+Key features include advanced night-vision capabilities, real-time defect detection powered by edge AI, and a modular sensor array that adapts to various inspection requirements. Early pilot programs have demonstrated detection accuracy improvements of over 40% compared to traditional manual inspection methods.`
+},
   {
-    date: 'September 10, 2025',
+    date: 'September 5, 2025',
     category: 'Company',
     title: 'Scout Robotics moves HQ inside Philadelphia',
-    excerpt: 'To support our growing engineering team, we have moved to a dedicated facility in the Navy Yard.',
-    image: NEWS_IMAGES.COMPANY_UPDATE
-  }
+    excerpt: 'To support our growing engineering team, we have moved to a dedicated larger Office space in the Pennovation Center.',
+    image: NEWS_IMAGES.COMPANY_UPDATE,
+    readTime: '2 min read',
+    content: `Scout Robotics is excited to announce the relocation of our headquarters to a new, larger office space within the Pennovation Center in Philadelphia. This move reflects our rapid growth and commitment to fostering innovation in infrastructure autonomy.
+
+The new headquarters provides expanded facilities to accommodate our growing engineering and operations teams, enabling us to accelerate product development and enhance collaboration. "Our new space at the Pennovation Center positions us at the heart of Philadelphia's vibrant tech ecosystem," said Tejas Agarwal, CEO. "We're thrilled to continue building the future of infrastructure inspection from this dynamic location."`
+  },
 ];
 
 const News: React.FC<NewsProps> = ({ onNavigate }) => {
