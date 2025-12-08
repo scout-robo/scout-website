@@ -39,7 +39,7 @@ export const NEWS_IMAGES = {
 
 // Industries
 export const INDUSTRY_IMAGES = {
-  RAIL: '/images/industries/rail.jpg',
+  RAIL: '/images/industries/rail.png',
   ROADS: '/images/industries/roads.jpg',
   AIRPORTS: '/images/industries/airports.jpg',
   CITIES: '/images/industries/cities.jpg',
@@ -53,8 +53,8 @@ export const HERO_IMAGES = {
 
 // Features Section
 export const FEATURE_IMAGES = {
-  FEATURE_1: '/images/features/feature-1.jpg',
-  FEATURE_2: '/images/features/feature-2.jpg',
+  FEATURE_1: '/images/features/feature-1.png',
+  FEATURE_2: '/images/features/feature-2.png',
   // Add more feature images as needed
 } as const;
 
@@ -81,6 +81,7 @@ export const PRODUCT_IMAGES = {
 // Company Section
 export const COMPANY_IMAGES = {
   OFFICE: '/images/features/office.jpg',
+  TEAM_WORKING: '/images/features/team-working.png',
 } as const;
 
 /**

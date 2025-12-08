@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Linkedin, Twitter, MapPin, Aperture } from 'lucide-react';
+import { Mail, Linkedin, Twitter, MapPin } from 'lucide-react';
 import { Page } from '../App';
 import { LOGO_PATH } from '../src/constants/images';
 
@@ -16,16 +16,9 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             
             {/* LOGO SECTION - EDIT HERE TO REPLACE LOGO */}
             <div className="flex items-center gap-3 mb-8 cursor-pointer" onClick={() => onNavigate('home')}>
-                {/* OPTION 1: IMAGE LOGO (Uncomment the line below to use your logo image) */}
-                {/* <img src={LOGO_PATH} alt="Scout Robotics Logo" className="h-8 md:h-10 w-auto" /> */}
-
-                {/* OPTION 2: TEXT + ICON LOGO */}
-                <>
-                  <div className="relative w-8 h-8 flex items-center justify-center">
-                      <Aperture className="w-8 h-8 text-scout-primary" />
-                  </div>
-                  <span className="text-xl font-bold text-white uppercase tracking-tight">Scout<span className="text-scout-primary">Robotics</span></span>
-                </>
+                {/* Logo Icon + Text */}
+                <img src={LOGO_PATH} alt="Scout Robotics Icon" className="h-8 md:h-10 w-auto" />
+                <span className="text-xl font-bold text-white uppercase tracking-tight">Scout<span className="text-scout-primary">Robotics</span></span>
             </div>
             {/* END LOGO SECTION */}
 

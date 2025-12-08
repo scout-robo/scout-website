@@ -11,9 +11,9 @@ const teamMembers = [
     },
     {
         name: "Arjun Nanda",
-        role: "CTO",
+        role: "Chief Technology Officer",
         image: TEAM_IMAGES.ARJUN_NANDA,
-        bio: "Repeat founder, AI expert, ex-tortuga, ex-airworks, University of Pennsylvania."
+        bio: "Repeat founder, AI expert, ex-tortuga, ex-airworks, UPenn."
     }
     // {
     //     name: "Lead Engineer",
@@ -75,7 +75,7 @@ export const AboutUs: React.FC = () => {
                     </div>
                     <div className="relative h-80 rounded-2xl overflow-hidden shadow-2xl border border-white/10">
                          <img 
-                            src={COMPANY_IMAGES.OFFICE} 
+                            src={COMPANY_IMAGES.TEAM_WORKING} 
                             alt="Team working on robot" 
                             className="absolute inset-0 w-full h-full object-cover"
                          />

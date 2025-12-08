@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, LogIn, Aperture } from 'lucide-react';
+import { Menu, X, LogIn } from 'lucide-react';
+import { LOGO_PATH } from '../src/constants/images';
 
 interface NavbarProps {
   currentPage: string;
@@ -69,21 +70,11 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
             onClick={() => { onNavigate('home'); window.scrollTo(0,0); setIsMobileMenuOpen(false); }}
             className="flex items-center gap-3 cursor-pointer group shrink-0 relative z-50"
           >
-            {/* OPTION 1: IMAGE LOGO (Uncomment the line below to use your logo image) */}
-            {/* <img src={LOGO_PATH} alt="Scout Robotics Logo" className="h-8 md:h-10 w-auto" /> */}
-
-            {/* OPTION 2: TEXT + ICON LOGO */}
-            <>
-              <div className="relative w-8 h-8 flex items-center justify-center">
-                 <Aperture className="w-8 h-8 text-scout-primary group-hover:rotate-180 transition-transform duration-700" />
-                 <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-2 h-2 bg-scout-accent rounded-full"></div>
-                 </div>
-              </div>
-              <span className="text-lg md:text-xl font-bold tracking-tight text-white uppercase font-mono">
-                Scout<span className="text-scout-primary">Robotics</span>
-              </span>
-            </>
+            {/* Logo Icon + Text */}
+            <img src={LOGO_PATH} alt="Scout Robotics Icon" className="h-8 md:h-10 w-auto group-hover:scale-110 transition-transform duration-300" />
+            <span className="text-lg md:text-xl font-bold tracking-tight text-white uppercase font-mono">
+              Scout<span className="text-scout-primary">Robotics</span>
+            </span>
             {/* END LOGO SECTION */}
           </div>
 
