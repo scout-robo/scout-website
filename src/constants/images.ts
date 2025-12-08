@@ -39,10 +39,10 @@ export const NEWS_IMAGES = {
 
 // Industries
 export const INDUSTRY_IMAGES = {
-  RAIL: '/images/industries/rail.png',
-  ROADS: '/images/industries/roads.jpg',
+  RAIL: '/images/industries/rail.jpg',
+  ROADS: '/images/industries/road.jpg',
   AIRPORTS: '/images/industries/airports.jpg',
-  CITIES: '/images/industries/cities.jpg',
+  CITIES: '/images/industries/urban.jpg',
 } as const;
 
 // Hero Section
@@ -53,7 +53,7 @@ export const HERO_IMAGES = {
 
 // Features Section
 export const FEATURE_IMAGES = {
-  FEATURE_1: '/images/features/feature-1.png',
+  FEATURE_1: '/images/features/feature-1.jpg',
   FEATURE_2: '/images/features/feature-2.png',
   // Add more feature images as needed
 } as const;
@@ -69,8 +69,8 @@ export const SOLUTION_IMAGES = {
 
 // Technology Section
 export const TECHNOLOGY_IMAGES = {
-  TECH_1: '/images/technology/tech-1.jpg',
-  TECH_2: '/images/technology/tech-2.jpg',
+  TECH_1: '/images/technology/tech-1.png',
+  TECH_2: '/images/technology/tech-2.png',
 } as const;
 
 // Product Deep Dive

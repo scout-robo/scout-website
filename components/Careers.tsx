@@ -89,7 +89,7 @@ const Careers: React.FC = () => {
             <div>
                 <h2 className="text-3xl font-bold mb-4 text-white">Open Positions</h2>
                 <p className="text-slate-400 max-w-xl">
-                    Like a role below? Send your resume to careers@scoutrobotics.com. <br> Don't see one? Reach out & let's talk!
+                    Like a role below? Send your resume to careers@scoutrobotics.com. <br /> Don't see one? Reach out & let's talk!
                 </p>
             </div>
         </div>
