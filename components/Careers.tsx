@@ -14,12 +14,13 @@ interface JobPosting {
 
 const Careers: React.FC = () => {
   const [expandedRole, setExpandedRole] = useState<string | null>(null);
+  const [submittedRole, setSubmittedRole] = useState<string | null>(null);
 
   const jobPostings: JobPosting[] = [
     {
       id: 'cv-engineer',
       title: 'Computer Vision Engineer',
-      location: 'Remote / Hybrid',
+      location: 'Onsite',
       type: 'Full-time',
       department: 'Engineering',
       description: 'Scout Robotics (formerly Sahay AI) is revolutionizing infrastructure inspection with autonomous AI-powered systems. We\'re building the future of predictive maintenance for rail, roads, and critical infrastructure—turning every revenue vehicle into a smart inspection platform. Lead the development of our core AI vision systems. You\'ll design and deploy cutting-edge computer vision algorithms that detect defects in real-time from moving vehicles, pushing the boundaries of what\'s possible in autonomous inspection.',
@@ -63,7 +64,7 @@ const Careers: React.FC = () => {
     {
       id: 'mechatronics-engineer',
       title: 'Mechatronics Engineer',
-      location: 'Hybrid / On-site',
+      location: 'On-site',
       type: 'Full-time',
       department: 'Hardware',
       description: 'Scout Robotics (formerly Sahay AI) is revolutionizing infrastructure inspection with autonomous AI-powered systems. We\'re turning every revenue vehicle into a smart inspection platform. Design and build the complete Scout hardware system—from mechanical enclosures to embedded firmware. You\'ll integrate sensors, motors, and electronics into ruggedized pods that survive harsh railway environments while delivering precise measurements.',
@@ -107,7 +108,7 @@ const Careers: React.FC = () => {
     {
       id: 'full-stack-dev',
       title: 'Full Stack Developer',
-      location: 'Remote / Hybrid',
+      location: 'Hybrid',
       type: 'Full-time',
       department: 'Engineering',
       description: 'Scout Robotics (formerly Sahay AI) is revolutionizing infrastructure inspection with autonomous AI-powered systems. We\'re building the future of predictive maintenance for rail and roads. Build the cloud platform and mobile apps that field crews rely on. You\'ll create intuitive interfaces for complex data, real-time dashboards, and notification systems that save lives and infrastructure.',
@@ -129,7 +130,7 @@ const Careers: React.FC = () => {
     {
       id: 'founders-office',
       title: 'Founder\'s Office Intern',
-      location: 'Hybrid / Remote',
+      location: 'Onsite / Hybrid',
       type: 'Internship (3-6 months)',
       department: 'Operations',
       description: 'Scout Robotics (formerly Sahay AI) is revolutionizing infrastructure inspection with autonomous AI-powered systems. Our vision is to create a world where infrastructure failures are predicted and prevented before they happen. Work directly with the founding team on high-impact projects across product, sales, and strategy. This is a unique opportunity to wear many hats, learn startup operations, and shape the direction of a growing company.',
@@ -292,66 +293,99 @@ const Careers: React.FC = () => {
                         <h4 className="text-sm font-mono text-scout-primary uppercase tracking-wider mb-4">
                           Apply for this position
                         </h4>
-                        <form
-                          onSubmit={(e) => {
-                            e.preventDefault();
-                            const formData = new FormData(e.currentTarget);
-                            const subject = `Application: ${job.title}`;
-                            const body = `
+                        
+                        {submittedRole === job.id ? (
+                          <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-6 text-center">
+                            <div className="text-green-400 text-4xl mb-4">✓</div>
+                            <h5 className="text-white font-bold mb-2">Application Details Copied!</h5>
+                            <p className="text-slate-300 text-sm mb-4">
+                              Your application details have been copied to your clipboard.
+                            </p>
+                            <p className="text-slate-400 text-sm mb-4">
+                              Please email them to: <a href="mailto:careers@scoutrobotics.com" className="text-scout-primary hover:underline font-bold">careers@scoutrobotics.com</a>
+                            </p>
+                            <button
+                              onClick={() => setSubmittedRole(null)}
+                              className="text-sm text-slate-400 hover:text-white transition-colors"
+                            >
+                              Submit Another Application
+                            </button>
+                          </div>
+                        ) : (
+                          <form
+                            onSubmit={async (e) => {
+                              e.preventDefault();
+                              const formData = new FormData(e.currentTarget);
+                              const applicationText = `Application for ${job.title}
+
 Name: ${formData.get('name')}
 Email: ${formData.get('email')}
-Resume: ${formData.get('resume')}
-Fun Fact: ${formData.get('funFact')}
+Resume Link: ${formData.get('resume')}
+Fun Fact: ${formData.get('funFact') || 'N/A'}
 What excites me about Scout: ${formData.get('excitement')}
-                            `.trim();
-                            window.location.href = `mailto:careers@scoutrobotics.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                          }}
-                          className="space-y-4"
-                        >
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+Please send this to: careers@scoutrobotics.com`;
+
+                              try {
+                                await navigator.clipboard.writeText(applicationText);
+                                setSubmittedRole(job.id);
+                                // Auto-hide success message after 30 seconds
+                                setTimeout(() => setSubmittedRole(null), 30000);
+                              } catch (err) {
+                                // Fallback if clipboard fails
+                                alert(`Please email your application to careers@scoutrobotics.com\n\n${applicationText}`);
+                              }
+                            }}
+                            className="space-y-4"
+                          >
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                              <input
+                                type="text"
+                                name="name"
+                                placeholder="Full Name *"
+                                required
+                                className="bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:border-scout-primary"
+                              />
+                              <input
+                                type="email"
+                                name="email"
+                                placeholder="Email Address *"
+                                required
+                                className="bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:border-scout-primary"
+                              />
+                            </div>
                             <input
                               type="text"
-                              name="name"
-                              placeholder="Full Name *"
+                              name="resume"
+                              placeholder="Resume Link (Google Drive, Dropbox, or Portfolio URL) *"
                               required
-                              className="bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:border-scout-primary"
+                              className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:border-scout-primary"
                             />
-                            <input
-                              type="email"
-                              name="email"
-                              placeholder="Email Address *"
+                            <textarea
+                              name="funFact"
+                              placeholder="Tell us something fun you do outside of work 🎨"
+                              rows={2}
+                              className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:border-scout-primary resize-none"
+                            />
+                            <textarea
+                              name="excitement"
+                              placeholder="In one line: What excites you about Scout Robotics? ✨"
+                              rows={2}
                               required
-                              className="bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:border-scout-primary"
+                              className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:border-scout-primary resize-none"
                             />
-                          </div>
-                          <input
-                            type="text"
-                            name="resume"
-                            placeholder="Resume Link (Google Drive, Dropbox, or Portfolio URL) *"
-                            required
-                            className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:border-scout-primary"
-                          />
-                          <textarea
-                            name="funFact"
-                            placeholder="Tell us something fun you do outside of work 🎨"
-                            rows={2}
-                            className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:border-scout-primary resize-none"
-                          />
-                          <textarea
-                            name="excitement"
-                            placeholder="In one line: What excites you about Scout Robotics? ✨"
-                            rows={2}
-                            required
-                            className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:border-scout-primary resize-none"
-                          />
-                          <button
-                            type="submit"
-                            className="w-full bg-scout-primary hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
-                          >
-                            <Send className="w-5 h-5" />
-                            Submit Application
-                          </button>
-                        </form>
+                            <button
+                              type="submit"
+                              className="w-full bg-scout-primary hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                            >
+                              <Send className="w-5 h-5" />
+                              Copy & Prepare Application
+                            </button>
+                            <p className="text-xs text-slate-500 text-center">
+                              This will copy your application details to your clipboard, then you can paste and send via email.
+                            </p>
+                          </form>
+                        )}
                       </div>
                     </div>
                   )}
