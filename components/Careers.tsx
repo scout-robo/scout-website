@@ -357,19 +357,19 @@ Please send this to: careers@scoutrobotics.com`;
                             <input
                               type="text"
                               name="resume"
-                              placeholder="Resume Link (Google Drive, Dropbox, or Portfolio URL) *"
+                              placeholder="Resume Link (Google Drive (public), Dropbox, or Portfolio URL) *"
                               required
                               className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:border-scout-primary"
                             />
                             <textarea
                               name="funFact"
-                              placeholder="Tell us something fun you do outside of work 🎨"
+                              placeholder="Tell us something fun you do outside of work "
                               rows={2}
                               className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:border-scout-primary resize-none"
                             />
                             <textarea
                               name="excitement"
-                              placeholder="In one line: What excites you about Scout Robotics? ✨"
+                              placeholder="In one line: What excites you about Scout Robotics?"
                               rows={2}
                               required
                               className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:border-scout-primary resize-none"
