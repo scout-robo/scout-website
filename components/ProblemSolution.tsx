@@ -16,9 +16,9 @@ const ProblemSolution: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
           
           {/* Traditional Method */}
-          <div className="bg-white/5 rounded-2xl p-8 md:p-12 border border-white/5">
+          <div className="group bg-white/5 rounded-2xl p-8 md:p-12 border border-white/5 hover:border-red-500/30 hover:bg-white/[0.07] transition-all duration-300 hover:shadow-xl hover:shadow-red-500/5">
             <div className="flex items-center gap-3 mb-8 text-slate-400">
-                 <Calendar className="w-6 h-6" />
+                 <Calendar className="w-6 h-6 group-hover:text-red-500 transition-colors" />
                  <h3 className="text-xl font-bold uppercase tracking-wide">The "Snapshot" Approach</h3>
             </div>
             
@@ -49,12 +49,12 @@ const ProblemSolution: React.FC = () => {
           </div>
 
           {/* Scout Method */}
-          <div className="bg-scout-primary/10 rounded-2xl p-8 md:p-12 border border-scout-primary/20 relative overflow-hidden">
+          <div className="group bg-scout-primary/10 rounded-2xl p-8 md:p-12 border border-scout-primary/20 relative overflow-hidden hover:border-scout-primary/40 hover:bg-scout-primary/[0.15] transition-all duration-300 hover:shadow-2xl hover:shadow-scout-primary/20 hover:-translate-y-1">
              {/* Decorative glow */}
-             <div className="absolute top-0 right-0 w-64 h-64 bg-scout-primary/20 blur-[100px] rounded-full pointer-events-none"></div>
+             <div className="absolute top-0 right-0 w-64 h-64 bg-scout-primary/20 blur-[100px] rounded-full pointer-events-none group-hover:bg-scout-primary/30 transition-colors duration-500"></div>
 
             <div className="flex items-center gap-3 mb-8 text-scout-primary">
-                 <Activity className="w-6 h-6" />
+                 <Activity className="w-6 h-6 group-hover:scale-110 transition-transform" />
                  <h3 className="text-xl font-bold uppercase tracking-wide">The Scout Advantage</h3>
             </div>
             

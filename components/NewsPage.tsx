@@ -58,7 +58,7 @@ The achievement results from advanced sensor fusion algorithms that combine LiDA
 Independent validation by industry partners confirmed measurement accuracy within ±2mm for gauge and cross-level parameters, matching or exceeding the performance of specialized geometry cars that cost millions of dollars and require dedicated track time.`
   },
   {
-      date: 'May June 30, 2025',
+      date: 'May 30, 2025',
     category: 'Company',
     title: 'Sahay AI Closes Preseed Funding Round',
     excerpt: 'Investment to accelerate product development and expand deployment across North America.',
@@ -110,13 +110,13 @@ const NewsPage: React.FC<NewsPageProps> = ({ onNavigate }) => {
             <div className="container mx-auto px-6 py-20">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {allNewsArticles.map((article, idx) => (
-                        <article key={idx}>
+                        <article key={idx} className="group hover:-translate-y-2 transition-transform duration-300">
                             <div className="relative h-64 overflow-hidden rounded-lg mb-6">
-                                <div className="absolute inset-0 bg-slate-900/20 z-10"></div>
+                                <div className="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/5 transition-colors duration-300 z-10"></div>
                                 <img 
                                     src={article.image} 
                                     alt={article.title} 
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                                 />
                                 <div className="absolute top-4 left-4 z-20 bg-black/70 backdrop-blur-sm px-3 py-1 rounded text-xs font-bold uppercase tracking-wider text-white">
                                     {article.category}
@@ -128,7 +128,7 @@ const NewsPage: React.FC<NewsPageProps> = ({ onNavigate }) => {
                                 <span>{article.date}</span>
                             </div>
                             
-                            <h3 className="text-xl font-bold text-white mb-3 leading-tight">
+                            <h3 className="text-xl font-bold text-white mb-3 leading-tight group-hover:text-scout-primary transition-colors">
                                 {article.title}
                             </h3>
                             <p className="text-slate-400 text-sm leading-relaxed mb-4">

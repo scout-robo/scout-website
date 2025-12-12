@@ -61,13 +61,13 @@ const News: React.FC<NewsProps> = ({ onNavigate }) => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {newsItems.map((item, idx) => (
-            <div key={idx}>
+            <div key={idx} className="group">
               <div className="relative h-64 overflow-hidden rounded-lg mb-6">
-                <div className="absolute inset-0 bg-slate-900/20 z-10"></div>
+                <div className="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/5 transition-colors duration-300 z-10"></div>
                 <img 
                   src={item.image} 
                   alt={item.title} 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute top-4 left-4 z-20 bg-black/70 backdrop-blur-sm px-3 py-1 rounded text-xs font-bold uppercase tracking-wider text-white">
                   {item.category}
@@ -79,7 +79,7 @@ const News: React.FC<NewsProps> = ({ onNavigate }) => {
                 <span>{item.date}</span>
               </div>
               
-              <h3 className="text-xl font-bold text-white mb-3 leading-tight">
+              <h3 className="text-xl font-bold text-white mb-3 leading-tight group-hover:text-scout-primary transition-colors">
                 {item.title}
               </h3>
               <p className="text-slate-400 text-sm leading-relaxed mb-4">

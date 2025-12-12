@@ -34,19 +34,19 @@ const SolutionLayout: React.FC<{
                          </div>
                     </div>
                     <div>
-                        <div className="bg-[#151e32] p-8 rounded-2xl border border-white/10 sticky top-32">
+                        <div className="bg-[#151e32] p-8 rounded-2xl border border-white/10 sticky top-32 hover:border-scout-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-scout-primary/10">
                             <h3 className="text-white font-bold text-lg mb-6 uppercase tracking-wider">Key Capabilities</h3>
                             <ul className="space-y-4">
                                 {features.map((feat, i) => (
-                                    <li key={i} className="flex items-start gap-3 text-slate-300">
-                                        <CheckCircle2 className="w-5 h-5 text-scout-primary shrink-0" />
+                                    <li key={i} className="flex items-start gap-3 text-slate-300 group/item hover:text-white transition-colors">
+                                        <CheckCircle2 className="w-5 h-5 text-scout-primary shrink-0 group-hover/item:scale-110 transition-transform" />
                                         <span>{feat}</span>
                                     </li>
                                 ))}
                             </ul>
                             <a 
                                 href="mailto:contact@scoutrobo.com?subject=Request for Spec Sheet" 
-                                className="block w-full mt-8 bg-scout-primary hover:bg-blue-600 text-white font-bold py-3 rounded-lg transition-colors text-center"
+                                className="block w-full mt-8 bg-scout-primary hover:bg-blue-600 text-white font-bold py-3 rounded-lg transition-all text-center hover:scale-105 hover:shadow-lg hover:shadow-scout-primary/30"
                             >
                                 Request Spec Sheet
                             </a>

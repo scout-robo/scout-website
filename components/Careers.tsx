@@ -217,13 +217,13 @@ const Careers: React.FC = () => {
                 >
                   {/* Job Header - Always Visible */}
                   <div
-                    className="p-6 cursor-pointer flex items-center justify-between"
+                    className="p-6 cursor-pointer flex items-center justify-between group hover:bg-white/[0.02] transition-all duration-200"
                     onClick={() => toggleRole(job.id)}
                   >
                     <div className="flex-1">
                       <div className="flex items-start justify-between mb-2">
-                        <h3 className="text-xl font-bold text-white">{job.title}</h3>
-                        <span className="text-xs font-mono text-scout-primary bg-scout-primary/10 px-3 py-1 rounded-full">
+                        <h3 className="text-xl font-bold text-white group-hover:text-scout-primary transition-colors">{job.title}</h3>
+                        <span className="text-xs font-mono text-scout-primary bg-scout-primary/10 px-3 py-1 rounded-full group-hover:bg-scout-primary/20 transition-colors">
                           {job.type}
                         </span>
                       </div>
@@ -238,11 +238,11 @@ const Careers: React.FC = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="ml-4 text-slate-400">
+                    <div className="ml-4 text-slate-400 group-hover:text-scout-primary transition-colors">
                       {expandedRole === job.id ? (
-                        <ChevronUp className="w-6 h-6" />
+                        <ChevronUp className="w-6 h-6 group-hover:translate-y-[-2px] transition-transform" />
                       ) : (
-                        <ChevronDown className="w-6 h-6" />
+                        <ChevronDown className="w-6 h-6 group-hover:translate-y-[2px] transition-transform" />
                       )}
                     </div>
                   </div>
