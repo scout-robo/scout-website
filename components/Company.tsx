@@ -7,13 +7,15 @@ const teamMembers = [
         name: "Tejas Agarwal",
         role: "Chief Executive Officer",
         image: TEAM_IMAGES.TEJAS_AGARWAL,
-        bio: "2x startup founder, roboticist, University of Pennsylvania, DTU."
+        bio: "2x startup founder, roboticist, University of Pennsylvania, DTU.",
+        linkedin: "https://www.linkedin.com/in/robojet/"
     },
     {
         name: "Arjun Nanda",
         role: "Chief Technology Officer",
         image: TEAM_IMAGES.ARJUN_NANDA,
-        bio: "Repeat founder, AI expert, ex-tortuga, ex-airworks, UPenn."
+        bio: "Repeat founder, AI expert, ex-tortuga, ex-airworks, UPenn.",
+        linkedin: "https://www.linkedin.com/in/arjun-megharjun-nandakumar-493686a6/"
     }
     // {
     //     name: "Lead Engineer",
@@ -92,7 +94,7 @@ export const AboutUs: React.FC = () => {
                     </p>
                 </div>
                 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
                     {teamMembers.map((member, idx) => (
                         <div key={idx} className="group bg-[#151e32] rounded-xl overflow-hidden border border-white/5 hover:border-scout-primary/50 transition-all hover:-translate-y-1">
                             <div className="h-64 overflow-hidden relative">
@@ -107,7 +109,7 @@ export const AboutUs: React.FC = () => {
                                 <p className="text-slate-400 text-sm mb-4 leading-relaxed">
                                     {member.bio}
                                 </p>
-                                <a href="#" className="inline-flex items-center gap-2 text-slate-500 hover:text-white transition-colors text-xs font-bold uppercase tracking-wider">
+                                <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-slate-500 hover:text-white transition-colors text-xs font-bold uppercase tracking-wider">
                                     <Linkedin size={14} /> Connect
                                 </a>
                             </div>

@@ -14,7 +14,6 @@ const newsItems = [
     title: 'Sahay AI changes name to Scout Robotics',
     excerpt: 'We are excited to announce our pilot program bringing daily automated inspection to the metro area.',
     image: NEWS_IMAGES.COMPANY_UPDATE,
-    readTime: '4 min read',
     content: `Sahay AI is excited to announce that we are rebranding to Scout Robotics, reflecting our evolution from an AI software provider to a full-stack robotics company dedicated to revolutionizing infrastructure inspection. Our new name embodies our commitment to building autonomous systems that enable industrial networks to inspect themselves, enhancing safety and efficiency.
     
     The rebranding comes alongside significant milestones, including the launch of our SPARK inspection system and expanded partnerships with major transit agencies. "Scout Robotics captures the essence of our mission to explore new frontiers in infrastructure autonomy," said Arjun Nanda, CTO. "We're thrilled to embark on this next chapter."`
@@ -25,7 +24,6 @@ const newsItems = [
   title: 'Scout Robotics Unveils SPARK - light weight & battery powered inspection system',
   excerpt: 'The latest generation of our hardware brings night-vision capabilities to automated track inspection.',
   image: NEWS_IMAGES.PRODUCT_LAUNCH,
-  readTime: '3 min read',
   content: `Scout Robotics is proud to announce the launch of SPARK, our next-generation lightweight and battery-powered inspection system. This breakthrough technology enables railways and transit agencies to conduct comprehensive infrastructure inspections with unprecedented flexibility and efficiency.
 
 SPARK represents a significant advancement in our mission to make infrastructure inspection accessible, affordable, and continuous. The system's battery-powered design eliminates the need for complex vehicle integrations, allowing for rapid deployment across diverse fleet types.
@@ -38,7 +36,6 @@ Key features include advanced night-vision capabilities, real-time defect detect
     title: 'Scout Robotics moves HQ inside Philadelphia',
     excerpt: 'To support our growing engineering team, we have moved to a dedicated larger Office space in the Pennovation Center.',
     image: NEWS_IMAGES.COMPANY_UPDATE,
-    readTime: '2 min read',
     content: `Scout Robotics is excited to announce the relocation of our headquarters to a new, larger office space within the Pennovation Center in Philadelphia. This move reflects our rapid growth and commitment to fostering innovation in infrastructure autonomy.
 
 The new headquarters provides expanded facilities to accommodate our growing engineering and operations teams, enabling us to accelerate product development and enhance collaboration. "Our new space at the Pennovation Center positions us at the heart of Philadelphia's vibrant tech ecosystem," said Tejas Agarwal, CEO. "We're thrilled to continue building the future of infrastructure inspection from this dynamic location."`
@@ -64,13 +61,13 @@ const News: React.FC<NewsProps> = ({ onNavigate }) => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {newsItems.map((item, idx) => (
-            <div key={idx} className="group cursor-pointer">
+            <div key={idx}>
               <div className="relative h-64 overflow-hidden rounded-lg mb-6">
-                <div className="absolute inset-0 bg-slate-900/20 group-hover:bg-transparent transition-colors z-10"></div>
+                <div className="absolute inset-0 bg-slate-900/20 z-10"></div>
                 <img 
                   src={item.image} 
                   alt={item.title} 
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute top-4 left-4 z-20 bg-black/70 backdrop-blur-sm px-3 py-1 rounded text-xs font-bold uppercase tracking-wider text-white">
                   {item.category}
@@ -82,7 +79,7 @@ const News: React.FC<NewsProps> = ({ onNavigate }) => {
                 <span>{item.date}</span>
               </div>
               
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-scout-primary transition-colors leading-tight">
+              <h3 className="text-xl font-bold text-white mb-3 leading-tight">
                 {item.title}
               </h3>
               <p className="text-slate-400 text-sm leading-relaxed mb-4">

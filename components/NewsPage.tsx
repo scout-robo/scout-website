@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ArrowLeft, Calendar, Clock } from 'lucide-react';
+import { ArrowLeft, Calendar } from 'lucide-react';
 import { NEWS_IMAGES } from '../src/constants/images';
 import { Page } from '../App';
 
@@ -110,31 +110,25 @@ const NewsPage: React.FC<NewsPageProps> = ({ onNavigate }) => {
             <div className="container mx-auto px-6 py-20">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {allNewsArticles.map((article, idx) => (
-                        <article key={idx} className="group cursor-pointer">
+                        <article key={idx}>
                             <div className="relative h-64 overflow-hidden rounded-lg mb-6">
-                                <div className="absolute inset-0 bg-slate-900/20 group-hover:bg-transparent transition-colors z-10"></div>
+                                <div className="absolute inset-0 bg-slate-900/20 z-10"></div>
                                 <img 
                                     src={article.image} 
                                     alt={article.title} 
-                                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                    className="w-full h-full object-cover"
                                 />
                                 <div className="absolute top-4 left-4 z-20 bg-black/70 backdrop-blur-sm px-3 py-1 rounded text-xs font-bold uppercase tracking-wider text-white">
                                     {article.category}
                                 </div>
                             </div>
                             
-                            <div className="flex items-center gap-4 text-slate-500 text-xs font-mono mb-3">
-                                <div className="flex items-center gap-1">
-                                    <Calendar className="w-3 h-3" />
-                                    <span>{article.date}</span>
-                                </div>
-                                <div className="flex items-center gap-1">
-                                    <Clock className="w-3 h-3" />
-                                    <span>{article.readTime}</span>
-                                </div>
+                            <div className="flex items-center gap-2 text-slate-500 text-xs font-mono mb-3">
+                                <Calendar className="w-3 h-3" />
+                                <span>{article.date}</span>
                             </div>
                             
-                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-scout-primary transition-colors leading-tight">
+                            <h3 className="text-xl font-bold text-white mb-3 leading-tight">
                                 {article.title}
                             </h3>
                             <p className="text-slate-400 text-sm leading-relaxed mb-4">
@@ -142,28 +136,6 @@ const NewsPage: React.FC<NewsPageProps> = ({ onNavigate }) => {
                             </p>
                         </article>
                     ))}
-                </div>
-            </div>
-
-            {/* Newsletter Signup */}
-            <div className="border-t border-white/5 py-20">
-                <div className="container mx-auto px-6">
-                    <div className="bg-[#151e32] border border-white/10 rounded-2xl p-12 text-center max-w-3xl mx-auto">
-                        <h2 className="text-3xl font-bold text-white mb-4">Stay Updated</h2>
-                        <p className="text-slate-400 mb-8">
-                            Get the latest news, product updates, and insights delivered to your inbox.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                            <input 
-                                type="email" 
-                                placeholder="your@email.com" 
-                                className="flex-1 px-4 py-3 bg-black/50 border border-white/10 rounded text-white placeholder-slate-500 focus:outline-none focus:border-scout-primary"
-                            />
-                            <button className="bg-scout-primary hover:bg-blue-600 text-white px-8 py-3 font-bold rounded transition-colors">
-                                Subscribe
-                            </button>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
