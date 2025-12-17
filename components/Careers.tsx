@@ -204,7 +204,7 @@ const Careers: React.FC = () => {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-4">Open Positions</h2>
             <p className="text-slate-400 mb-12">
-              Like a role below? Send your resume to <a href="mailto:careers@scoutrobo.com" className="text-scout-primary hover:underline">careers@scoutrobotics.com</a>.
+              Like a role below? Send your resume to <a href="mailto:careers@scoutrobo.com" className="text-scout-primary hover:underline">careers@scoutrobo.com</a>.
               <br />
               Don't see one? Reach out & let's talk!
             </p>
