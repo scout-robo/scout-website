@@ -302,7 +302,7 @@ const Careers: React.FC = () => {
                               Your application details have been copied to your clipboard.
                             </p>
                             <p className="text-slate-400 text-sm mb-4">
-                              Please email them to: <a href="mailto:careers@scoutrobotics.com" className="text-scout-primary hover:underline font-bold">careers@scoutrobotics.com</a>
+                              Please email them to: <a href="mailto:careers@scoutrobo.com" className="text-scout-primary hover:underline font-bold">careers@scoutrobo.com</a>
                             </p>
                             <button
                               onClick={() => setSubmittedRole(null)}
@@ -324,7 +324,7 @@ Resume Link: ${formData.get('resume')}
 Fun Fact: ${formData.get('funFact') || 'N/A'}
 What excites me about Scout: ${formData.get('excitement')}
 
-Please send this to: careers@scoutrobotics.com`;
+Please send this to: careers@scoutrobo.com`;
 
                               try {
                                 await navigator.clipboard.writeText(applicationText);
