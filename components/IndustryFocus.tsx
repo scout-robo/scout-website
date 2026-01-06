@@ -1,6 +1,6 @@
 import React from 'react';
 import { IndustryType, Industry } from '../types';
-import { Train, Truck, Plane, Building2, ChevronRight, ArrowRight } from 'lucide-react';
+import { Train, Truck, Plane, Building2, ChevronRight, ArrowRight, Ship } from 'lucide-react';
 import { INDUSTRY_IMAGES } from '../src/constants/images';
 
 const industries: Industry[] = [
@@ -14,11 +14,11 @@ const industries: Industry[] = [
   },
   {
     id: IndustryType.ROADS,
-    name: 'Highways',
-    label: 'HWY',
+    name: 'Ports & Terminals',
+    label: 'PORT',
     image: INDUSTRY_IMAGES.ROADS,
-    description: 'Map pavement condition and inventory assets at highway speeds.',
-    insights: ['Potholes', 'Cracking Index', 'Signage Inventory', 'Lane Marking']
+    description: 'Monitor port infrastructure and automate asset inspections.',
+    insights: ['Pavement Health', 'Stack Alignment', 'Safety Zones', 'Asset Tracking']
   },
   {
     id: IndustryType.AIRPORTS,
@@ -64,7 +64,7 @@ const IndustryFocus: React.FC = () => {
                     />
                     <div className="absolute top-4 left-4 z-20 bg-black/50 backdrop-blur-md p-2 rounded-lg border border-white/10">
                         {industry.id === IndustryType.RAIL && <Train className="text-white w-6 h-6" />}
-                        {industry.id === IndustryType.ROADS && <Truck className="text-white w-6 h-6" />}
+                        {industry.id === IndustryType.ROADS && <Ship className="text-white w-6 h-6" />}
                         {industry.id === IndustryType.AIRPORTS && <Plane className="text-white w-6 h-6" />}
                         {industry.id === IndustryType.CITIES && <Building2 className="text-white w-6 h-6" />}
                     </div>
