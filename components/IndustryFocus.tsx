@@ -18,7 +18,7 @@ const industries: Industry[] = [
     label: 'PORT',
     image: INDUSTRY_IMAGES.ROADS,
     description: 'Monitor port infrastructure and automate asset inspections.',
-    insights: ['Pavement Health', 'Stack Alignment', 'Safety Zones', 'Asset Tracking']
+    insights: ['Container Health', 'Stack Alignment', 'Safety Zones', 'Asset Tracking']
   },
   {
     id: IndustryType.AIRPORTS,
