@@ -20,7 +20,7 @@ const SystemArchitecture: React.FC = () => {
                         <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mb-4">
                             <Box className="w-6 h-6 text-blue-400" />
                         </div>
-                        <h4 className="text-white font-bold text-lg mb-1">LARRE</h4>
+                        <h4 className="text-white font-bold text-lg mb-1">Series X</h4>
                         <div className="text-xs font-mono text-slate-400 mb-3">LIDAR + VISION</div>
                         <p className="text-slate-400 text-sm mb-4">High-fidelity visual inspection unit. Mounts front facing on the body.</p>
                     </div>
@@ -33,7 +33,7 @@ const SystemArchitecture: React.FC = () => {
                         <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mb-4">
                             <Cpu className="w-6 h-6 text-purple-400" />
                         </div>
-                        <h4 className="text-white font-bold text-lg mb-1">FORGE</h4>
+                        <h4 className="text-white font-bold text-lg mb-1">Series T</h4>
                         <div className="text-xs font-mono text-slate-400 mb-3">VISION + LASER</div>
                         <p className="text-slate-400 text-sm mb-4">High-frequency Track Geometry unit. Mounts underneath the body.</p>
                     </div>
