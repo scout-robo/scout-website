@@ -11,14 +11,14 @@ const StepLeftPanel: React.FC<{
   width?: string;
 }> = ({ stepNumber, title, description, bullets, width = 'w-1/3' }) => {
   return (
-    <div className={`${width} p-8 border-r border-white/5 flex flex-col bg-gradient-to-br from-black to-[#0F172A]`}>
-      <div className="text-scout-primary font-mono text-xs uppercase tracking-widest mb-4">{stepNumber}</div>
-      <h3 className="text-3xl font-bold text-white mb-6">{title}</h3>
-      <p className="text-slate-400 text-base leading-relaxed mb-6">
+    <div className={`w-full ${width.replace('w-', 'md:w-')} p-4 md:p-8 border-b md:border-b-0 md:border-r border-white/5 flex flex-col bg-gradient-to-br from-black to-[#0F172A]`}>
+      <div className="text-scout-primary font-mono text-xs uppercase tracking-widest mb-3 md:mb-4">{stepNumber}</div>
+      <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-6">{title}</h3>
+      <p className="text-slate-400 text-sm md:text-base leading-relaxed mb-4 md:mb-6">
         {description}
       </p>
       {bullets && bullets.length > 0 && (
-        <div className="space-y-3">
+        <div className="space-y-2 md:space-y-3 hidden md:block">
           {bullets.map((bullet, index) => (
             <div key={index} className="flex items-start gap-2">
               <div className={`w-1.5 h-1.5 ${bullet.color} rounded-full mt-2 flex-shrink-0`}></div>
@@ -27,7 +27,7 @@ const StepLeftPanel: React.FC<{
           ))}
         </div>
       )}
-      <div className="mt-auto pt-6">
+      <div className="mt-auto pt-4 md:pt-6">
         <a href="mailto:contact@scoutrobo.com?subject=Product Inquiry" className="text-white text-sm font-bold flex items-center gap-2 group hover:text-scout-primary transition-colors">
           CONTACT US <span className="text-scout-primary group-hover:translate-x-1 transition-transform">→</span>
         </a>
@@ -87,24 +87,24 @@ const SystemArchitecture: React.FC = () => {
       icon: Target,
       description: 'Select the inspection programs you need.',
       detailContent: (
-        <div className="h-full flex">
+        <div className="h-full flex flex-col md:flex-row">
             <StepLeftPanel {...leftPanelConfig[0]} />
 
             {/* Right Panel: Outcomes + Products */}
-            <div className="flex-1 flex">
+            <div className="flex-1 flex flex-col md:flex-row">
                 {/* Middle Column: Outcome Buttons + Details */}
-                <div className="w-5/12 p-6 border-r border-white/5 bg-black/30 overflow-y-auto">
-                    <h4 className="text-sm font-bold text-white mb-4 uppercase tracking-wide">Choose Outcome</h4>
-                    <div className="flex flex-col gap-3 mb-6">
+                <div className="w-full md:w-5/12 p-4 md:p-6 border-b md:border-b-0 md:border-r border-white/5 bg-black/30 overflow-y-auto">
+                    <h4 className="text-sm font-bold text-white mb-3 md:mb-4 uppercase tracking-wide">Select Outcome</h4>
+                    <div className="flex flex-col gap-2 md:gap-3 mb-4 md:mb-6">
                         {/* Use Case 1: Daily Operations */}
                         <button 
-                            className={`px-3 py-2 rounded-lg border cursor-pointer transition-all flex items-center gap-2 text-left ${
+                            className={`px-3 py-3 md:py-2 rounded-lg border cursor-pointer transition-all flex items-center gap-2 text-left min-h-[44px] ${
                                 hoveredOutcome === 'a+os' 
                                 ? 'bg-amber-500/20 border-amber-500 shadow-lg' 
                                 : 'bg-black/40 border-white/10 hover:border-amber-500/30'
                             }`}
                             onMouseEnter={() => setHoveredOutcome('a+os')}
-                            onMouseLeave={() => setHoveredOutcome(null)}
+                            onClick={() => setHoveredOutcome(hoveredOutcome === 'a+os' ? null : 'a+os')}
                         >
                             <Wifi className="w-5 h-5 text-amber-400 flex-shrink-0" />
                             <span className="text-white text-sm font-medium">Daily Intelligence</span>
@@ -112,13 +112,13 @@ const SystemArchitecture: React.FC = () => {
 
                         {/* Use Case 2: Corridor Intelligence */}
                         <button 
-                            className={`px-3 py-2 rounded-lg border cursor-pointer transition-all flex items-center gap-2 text-left ${
+                            className={`px-3 py-3 md:py-2 rounded-lg border cursor-pointer transition-all flex items-center gap-2 text-left min-h-[44px] ${
                                 hoveredOutcome === 'x+os' 
                                 ? 'bg-blue-500/20 border-blue-500 shadow-lg' 
                                 : 'bg-black/40 border-white/10 hover:border-blue-500/30'
                             }`}
                             onMouseEnter={() => setHoveredOutcome('x+os')}
-                            onMouseLeave={() => setHoveredOutcome(null)}
+                            onClick={() => setHoveredOutcome(hoveredOutcome === 'x+os' ? null : 'x+os')}
                         >
                             <Box className="w-5 h-5 text-blue-400 flex-shrink-0" />
                             <span className="text-white text-sm font-medium">Corridor & RoW Analysis</span>
@@ -126,13 +126,13 @@ const SystemArchitecture: React.FC = () => {
 
                         {/* Use Case 3: Track Geometry */}
                         <button 
-                            className={`px-3 py-2 rounded-lg border cursor-pointer transition-all flex items-center gap-2 text-left ${
+                            className={`px-3 py-3 md:py-2 rounded-lg border cursor-pointer transition-all flex items-center gap-2 text-left min-h-[44px] ${
                                 hoveredOutcome === 't+os' 
                                 ? 'bg-purple-500/20 border-purple-500 shadow-lg' 
                                 : 'bg-black/40 border-white/10 hover:border-purple-500/30'
                             }`}
                             onMouseEnter={() => setHoveredOutcome('t+os')}
-                            onMouseLeave={() => setHoveredOutcome(null)}
+                            onClick={() => setHoveredOutcome(hoveredOutcome === 't+os' ? null : 't+os')}
                         >
                             <Cpu className="w-5 h-5 text-purple-400 flex-shrink-0" />
                             <span className="text-white text-sm font-medium">Track Geometry Analysis</span>
@@ -140,13 +140,13 @@ const SystemArchitecture: React.FC = () => {
 
                         {/* Use Case 4: Combined Corridor + Geometry */}
                         <button 
-                            className={`px-3 py-2 rounded-lg border cursor-pointer transition-all flex items-center gap-2 text-left ${
+                            className={`px-3 py-3 md:py-2 rounded-lg border cursor-pointer transition-all flex items-center gap-2 text-left min-h-[44px] ${
                                 hoveredOutcome === 'x+t+os' 
                                 ? 'bg-gradient-to-r from-blue-500/20 to-purple-500/20 border-blue-500 shadow-lg' 
                                 : 'bg-black/40 border-white/10 hover:border-blue-500/30'
                             }`}
                             onMouseEnter={() => setHoveredOutcome('x+t+os')}
-                            onMouseLeave={() => setHoveredOutcome(null)}
+                            onClick={() => setHoveredOutcome(hoveredOutcome === 'x+t+os' ? null : 'x+t+os')}
                         >
                             <Target className="w-5 h-5 text-blue-400 flex-shrink-0" />
                             <span className="text-white text-sm font-medium">Digital Twin</span>
@@ -154,13 +154,13 @@ const SystemArchitecture: React.FC = () => {
 
                         {/* Use Case 5: Complete Platform */}
                         <button 
-                            className={`px-3 py-2 rounded-lg border cursor-pointer transition-all flex items-center gap-2 text-left ${
+                            className={`px-3 py-3 md:py-2 rounded-lg border cursor-pointer transition-all flex items-center gap-2 text-left min-h-[44px] ${
                                 hoveredOutcome === 'all' 
                                 ? 'bg-gradient-to-r from-amber-500/20 via-blue-500/20 to-purple-500/20 border-scout-primary shadow-lg' 
                                 : 'bg-black/40 border-white/10 hover:border-scout-primary/30'
                             }`}
                             onMouseEnter={() => setHoveredOutcome('all')}
-                            onMouseLeave={() => setHoveredOutcome(null)}
+                            onClick={() => setHoveredOutcome(hoveredOutcome === 'all' ? null : 'all')}
                         >
                             <Database className="w-5 h-5 text-scout-primary flex-shrink-0" />
                             <span className="text-white text-sm font-medium">Complete Inspection Platform</span>
@@ -295,7 +295,7 @@ const SystemArchitecture: React.FC = () => {
                 </div>
 
                 {/* Right Column: Products */}
-                <div className="flex-1 p-6 bg-black/20 overflow-y-auto">
+                <div className="flex-1 flex flex-col p-4 md:p-6 bg-black/20 overflow-y-auto">
                     <h4 className="text-sm font-bold text-white mb-4 uppercase tracking-wide">Our Products</h4>
                     <div className="space-y-3">
                         {/* Scout A Series */}
@@ -431,15 +431,15 @@ const SystemArchitecture: React.FC = () => {
       icon: Settings,
       description: 'From installation to autonomous data collection.',
       detailContent: (
-        <div className="h-full flex">
+        <div className="h-full flex flex-col md:flex-row">
             <StepLeftPanel {...leftPanelConfig[1]} />
 
             {/* Right Panel: Timeline */}
             <div className="flex-1 relative overflow-hidden bg-black/50">
-                <div className={`absolute inset-0 bg-cover bg-center opacity-60`} style={{backgroundImage: `url(${PRODUCT_IMAGES.BACKGROUND})`}}></div>
+                <div className={`absolute inset-0 bg-cover bg-center opacity-20 md:opacity-60`} style={{backgroundImage: `url(${PRODUCT_IMAGES.BACKGROUND})`}}></div>
              
              {/* Timeline Flow */}
-             <div className="relative h-full flex flex-col justify-center p-8 z-10">
+             <div className="relative h-full flex flex-col justify-center p-4 md:p-8 z-10">
                  <div className="max-w-3xl mx-auto w-full">
                      {/* Step 1: Mount */}
                      <div className="flex items-start gap-3 mb-5">
@@ -523,7 +523,7 @@ const SystemArchitecture: React.FC = () => {
                              <p className="text-slate-300 text-sm mb-3 leading-relaxed">
                                  Every mile inspected. AI detects anomalies. Data syncs to Scout OS continuously.
                              </p>
-                             <div className="grid grid-cols-3 gap-2 mt-3">
+                             <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mt-3">
                                  <div className="bg-black/60 rounded p-2 border border-white/10">
                                      <div className="text-[10px] text-slate-400 uppercase mb-0.5">Objects Detected</div>
                                      <div className="text-slate-200 font-mono font-bold text-base">142</div>
@@ -554,12 +554,12 @@ const SystemArchitecture: React.FC = () => {
       icon: Cloud,
       description: 'Data syncs to the cloud for deep analytics.',
       detailContent: (
-        <div className="h-full flex">
+        <div className="h-full flex flex-col md:flex-row">
             <StepLeftPanel {...leftPanelConfig[2]} />
 
             {/* Right Panel: Dashboard View */}
             <div className="flex-1 bg-[#1E293B] flex flex-col relative">
-            <div className="bg-[#0F172A] px-4 py-3 border-b border-slate-700 flex justify-between items-center">
+            <div className="hidden md:flex bg-[#0F172A] px-4 py-3 border-b border-slate-700 justify-between items-center">
                 <div className="flex gap-1.5">
                     <div className="w-2 h-2 rounded-full bg-slate-600"></div>
                     <div className="w-2 h-2 rounded-full bg-slate-600"></div>
@@ -567,16 +567,16 @@ const SystemArchitecture: React.FC = () => {
                 </div>
                 <div className="text-slate-500 font-mono text-[10px]">app.scoutrobo.com</div>
             </div>
-            <div className="flex-1 relative bg-slate-900">
+            <div className="flex-1 relative bg-slate-900 min-h-[400px]">
                 {/* Static Map Background */}
                 <img 
                     src={PRODUCT_IMAGES.DASHBOARD_MAP} 
                     alt="Dashboard Map View" 
-                    className="absolute inset-0 w-full h-full object-cover opacity-60"
+                    className="absolute inset-0 w-full h-full object-cover opacity-30 md:opacity-60"
                 />
                 
                 {/* Overlay Elements */}
-                <div className="absolute top-4 right-4 bg-slate-900/90 backdrop-blur p-4 rounded border border-slate-700 w-64 shadow-xl z-10">
+                <div className="absolute inset-x-4 top-1/2 -translate-y-1/2 md:top-4 md:right-4 md:left-auto md:translate-y-0 bg-slate-900/95 md:bg-slate-900/90 backdrop-blur p-4 rounded border border-slate-700 md:w-64 shadow-xl z-10">
                     <div className="text-xs font-bold text-white mb-3 uppercase tracking-wider">Asset Health Score</div>
                     <div className="w-full bg-slate-700 h-2 rounded-full overflow-hidden mb-2">
                         <div className="w-[85%] h-full bg-green-500"></div>
@@ -588,9 +588,9 @@ const SystemArchitecture: React.FC = () => {
                 </div>
                 
                 {/* Defect Pins */}
-                <div className="absolute top-1/3 left-1/4 w-3 h-3 bg-red-500 rounded-full border-2 border-white shadow-lg animate-bounce"></div>
-                <div className="absolute top-1/2 left-1/2 w-3 h-3 bg-yellow-500 rounded-full border-2 border-white shadow-lg"></div>
-                <div className="absolute bottom-1/3 right-1/3 w-3 h-3 bg-orange-500 rounded-full border-2 border-white shadow-lg"></div>
+                <div className="hidden md:block absolute top-1/3 left-1/4 w-3 h-3 bg-red-500 rounded-full border-2 border-white shadow-lg animate-bounce"></div>
+                <div className="hidden md:block absolute top-1/2 left-1/2 w-3 h-3 bg-yellow-500 rounded-full border-2 border-white shadow-lg"></div>
+                <div className="hidden md:block absolute bottom-1/3 right-1/3 w-3 h-3 bg-orange-500 rounded-full border-2 border-white shadow-lg"></div>
             </div>
         </div>
         </div>
@@ -602,17 +602,16 @@ const SystemArchitecture: React.FC = () => {
       icon: Smartphone,
       description: 'Field crews get instant alerts on the mobile app.',
       detailContent: (
-        <div className="h-full flex">
+        <div className="h-full flex flex-col md:flex-row">
             <StepLeftPanel {...leftPanelConfig[3]} />
 
             {/* Right Panel: Flow Diagram */}
-            <div className="flex-1 flex items-center justify-center bg-[#0B1120] relative overflow-hidden p-8">
+            <div className="flex-1 flex items-center justify-center bg-[#0B1120] relative overflow-hidden p-4 md:p-8">
                 <div className="absolute inset-0 bg-gradient-to-tr from-scout-primary/10 to-transparent"></div>
                 
-                {/* Connection Flow Diagram */}
-            <div className="relative w-full max-w-5xl flex flex-col gap-8">
-                {/* Top Row: Flow Diagram */}
-                <div className="flex items-center justify-between gap-6">
+            <div className="relative w-full max-w-5xl flex flex-col gap-6 md:gap-8">
+                {/* Flow Diagram - Desktop Only */}
+                <div className="hidden md:flex items-center justify-between gap-6">
                     {/* Scout Pod */}
                     <div className="flex flex-col items-center relative z-10">
                         <div className="w-24 h-24 bg-blue-500/20 rounded-xl border-2 border-blue-500 flex items-center justify-center mb-2 shadow-lg shadow-blue-500/20">
@@ -675,8 +674,8 @@ const SystemArchitecture: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Bottom Row: Info Cards */}
-                <div className="grid grid-cols-3 gap-4">
+                {/* Info Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {/* Alert Types */}
                     <div className="bg-black/40 backdrop-blur border border-white/10 rounded-lg p-4">
                         <div className="text-[10px] font-mono text-scout-primary mb-3 uppercase tracking-wider">Alert Priority</div>
@@ -786,7 +785,7 @@ const SystemArchitecture: React.FC = () => {
         </div>
 
         {/* Dynamic Display Area */}
-        <div ref={displayAreaRef} className="bg-[#0F172A] rounded-2xl border border-white/10 overflow-hidden shadow-2xl min-h-[500px] flex flex-col md:flex-row transition-all duration-500 scroll-mt-24">
+        <div ref={displayAreaRef} className="bg-[#0F172A] rounded-2xl border border-white/10 overflow-hidden shadow-2xl min-h-[650px] flex flex-col md:flex-row transition-all duration-300 scroll-mt-24">
             {/* Content - Full width for all steps now */}
             <div className="w-full relative bg-black/50">
                 {steps[activeStep].detailContent}
