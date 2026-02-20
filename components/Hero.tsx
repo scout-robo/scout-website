@@ -38,9 +38,9 @@ const Hero: React.FC = () => {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-8">
-            Daily Inspections. <br />
+            Smart Inspections, <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-scout-primary to-blue-400">
-                Total Visibility.
+                Total Visibility
             </span>
           </h1>
 

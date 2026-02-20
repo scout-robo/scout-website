@@ -76,9 +76,13 @@ export const TECHNOLOGY_IMAGES = {
 // Product Deep Dive
 export const PRODUCT_IMAGES = {
   BACKGROUND: '/images/products/product-bg.png',
-  LARRE: '/images/products/larre.png',
-  FORGE: '/images/products/forge.png',
-  SPARK: '/images/products/spark.png',
+  LARRE: '/images/products/larre.png', // X Series
+  FORGE: '/images/products/forge.png', // T Series
+  SPARK: '/images/products/spark.png', // A Series
+  A_SERIES: '/images/products/spark.png', // A Series (Always-On Monitoring)
+  X_SERIES: '/images/products/larre.png', // X Series (Corridor Intelligence)  
+  T_SERIES: '/images/products/forge.png', // T Series (Track Geometry)
+  SCOUT_OS: '/images/products/ScoutOS.png', // Scout OS Platform
   DASHBOARD_MAP: '/images/products/dashboard-map.png',
 } as const;
 
