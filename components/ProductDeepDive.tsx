@@ -52,7 +52,7 @@ const SystemArchitecture: React.FC = () => {
     {
       stepNumber: 'Step 01',
       title: 'Design your custom solution', // shorter title
-      description: 'Select the problem you are looking for. We have carefully designed our product offerings to resonate with industry needs. Our products combine to deliver comprehensive infrastructure intelligence.',
+      description: 'We have carefully designed our product offerings to resonate with industry needs. Our mission is to deliver comprehensive infrastructure intelligence.',
       bullets: [
         { color: 'bg-scout-primary', text: 'Digital twins to daily operations' },
         { color: 'bg-amber-400', text: 'Install in minutes, scale as you grow' },
