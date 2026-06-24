@@ -77,7 +77,7 @@ const ProblemSolution: React.FC = () => {
                 <div>
                   <h4 className="text-white font-semibold text-lg mb-2">Augment Your Workforce</h4>
                   <p className="text-slate-300 leading-relaxed">
-                    AI highlights potential issues automatically, allowing your skilled crews to focus on verification and repair rather than walking miles of track.
+                    AI highlights potential issues automatically, allowing your skilled crews to focus on verification and repair rather than searching miles of track.
                   </p>
                 </div>
               </li>

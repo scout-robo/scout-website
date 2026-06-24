@@ -68,7 +68,7 @@ const Features: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3">Uncompromised Safety</h3>
                 <p className="text-slate-400 leading-relaxed">
-                    Keep your people off the tracks. Automated inspection reduces the need for manual walking inspections, minimizing risk to your workforce.
+                    Prioritize safety for people, workforce & infrastructure. Continous inspections builds intelligence to do targeted maintenance rather than reactive fixes.
                 </p>
              </div>
              <div className="mt-4 flex items-center gap-4 text-sm text-slate-500 font-mono">

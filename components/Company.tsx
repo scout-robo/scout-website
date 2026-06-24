@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Linkedin } from 'lucide-react';
 import { TEAM_IMAGES, ADVISOR_IMAGES, COMPANY_IMAGES } from '../src/constants/images';
 
 const teamMembers = [
@@ -7,15 +6,36 @@ const teamMembers = [
         name: "Tejas Agarwal",
         role: "Chief Executive Officer",
         image: TEAM_IMAGES.TEJAS_AGARWAL,
-        bio: "2x startup founder, roboticist, University of Pennsylvania, DTU.",
+        bio: "2x startup founder, roboticist, UPenn, DTU.",
         linkedin: "https://www.linkedin.com/in/robojet/"
     },
     {
         name: "Arjun Nanda",
         role: "Chief Technology Officer",
         image: TEAM_IMAGES.ARJUN_NANDA,
-        bio: "Repeat founder, AI expert, ex-tortuga, ex-airworks, UPenn.",
+        bio: "Repeat founder, ex-tortuga, ex-airworks, UPenn.",
         linkedin: "https://www.linkedin.com/in/arjun-megharjun-nandakumar-493686a6/"
+    },
+    {
+        name: "Rajath Chandrashekar",
+        role: "Hardware",
+        image: TEAM_IMAGES.RAJATH_CHANDRASHEKAR,
+        bio: "UB, CMTI Bangalore, Patents in Aerospace & Medical industry.",
+        linkedin: "#"
+    },
+    {
+        name: "Kishore Paranthaman",
+        role: "Robotics",
+        image: TEAM_IMAGES.KISHORE_PARANTHAMAN,
+        bio: "JHU, ROS Industrial Consortium (A*STAR), Cofounded ACK Robotics.",
+        linkedin: "#"
+    },
+    {
+        name: "Erik Jagnandan",
+        role: "ML + AI",
+        image: TEAM_IMAGES.ERIK_JAGNANDAN,
+        bio: "UPenn, Army Research Lab, Autonomous & perception systems.",
+        linkedin: "#"
     }
     // {
     //     name: "Lead Engineer",
@@ -46,6 +66,18 @@ const advisors = [
         name: "Randell Iwasaki",
         role: "Former Caltrans Director, Former CEO Contra Costa Transportation Authority",
         image: ADVISOR_IMAGES.RANDELL_IWASAKI
+    },
+    {
+        name: "Rahul Mangharam",
+        role: "Professor at UPenn, leader in DOT safety and transportation systems",
+        image: TEAM_IMAGES.RAHUL_MANGHARAM,
+        bio: "Professor at UPenn and a respected voice in DOT safety, transportation systems, and public-sector innovation."
+    },
+    {
+        name: "Josh Devon",
+        role: "Former COO of Flashpoint, CEO of Sondera",
+        image: TEAM_IMAGES.JOSH_DEVON,
+        bio: "Former COO of Flashpoint and CEO of Sondera, bringing deep operator, founder, and growth experience to autonomy."
     }
 ];
 
@@ -72,7 +104,7 @@ export const AboutUs: React.FC = () => {
                             Scout Robotics Inc. (Formerly Sahay AI, Inc.) was founded by a team of passionate robotics engineers and transit experts who saw a fundamental problem: infrastructure maintenance is reactive, dangerous, and outdated.
                         </p>
                         <p className="text-slate-400 leading-relaxed">
-                            We realized that specialized inspection vehicles and manual methods were too infrequent, expensive and prone to mistakes. The solution wasn't to build more inspection cars, but to turn the thousands of trains and trucks already moving into inspectors.
+                            We saw first hand that specialized inspection vehicles and inspection siloes were too infrequent, expensive and prone to mistakes. The solution wasn't to build more inspection cars, but to turn the thousands of trains and trucks already moving into smart vehicles.
                         </p>
                     </div>
                     <div className="relative h-80 rounded-2xl overflow-hidden shadow-2xl border border-white/10">
@@ -88,14 +120,14 @@ export const AboutUs: React.FC = () => {
             {/* Team Section */}
             <div className="container mx-auto px-6 py-24 border-b border-white/5">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl font-bold text-white mb-4">Core Leadership</h2>
+                    <h2 className="text-3xl font-bold text-white mb-4">Core Team</h2>
                     <p className="text-slate-400 max-w-2xl mx-auto">
                         The minds behind the machine. We combine deep industry knowledge with cutting-edge robotics expertise.
                     </p>
                 </div>
                 
-                <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-                    {teamMembers.map((member, idx) => (
+                <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
+                    {teamMembers.slice(0, 2).map((member, idx) => (
                         <div key={idx} className="group bg-[#151e32] rounded-xl overflow-hidden border border-white/5 hover:border-scout-primary/50 transition-all hover:-translate-y-1">
                             <div className="h-64 overflow-hidden relative">
                                 <img src={member.image} alt={member.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
@@ -106,12 +138,29 @@ export const AboutUs: React.FC = () => {
                                 </div>
                             </div>
                             <div className="p-6">
-                                <p className="text-slate-400 text-sm mb-4 leading-relaxed">
+                                <p className="text-slate-400 text-sm leading-relaxed">
                                     {member.bio}
                                 </p>
-                                <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-slate-500 hover:text-white transition-colors text-xs font-bold uppercase tracking-wider">
-                                    <Linkedin size={14} /> Connect
-                                </a>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    {teamMembers.slice(2).map((member, idx) => (
+                        <div key={idx + 2} className="group bg-[#151e32] rounded-xl overflow-hidden border border-white/5 hover:border-scout-primary/50 transition-all hover:-translate-y-1">
+                            <div className="h-64 overflow-hidden relative">
+                                <img src={member.image} alt={member.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#151e32] to-transparent opacity-80"></div>
+                                <div className="absolute bottom-4 left-4 right-4">
+                                     <h3 className="text-xl font-bold text-white">{member.name}</h3>
+                                     <p className="text-scout-primary text-sm font-medium">{member.role}</p>
+                                </div>
+                            </div>
+                            <div className="p-6">
+                                <p className="text-slate-400 text-sm leading-relaxed">
+                                    {member.bio}
+                                </p>
                             </div>
                         </div>
                     ))}
@@ -123,11 +172,11 @@ export const AboutUs: React.FC = () => {
                 <div className="text-center mb-16">
                     <h2 className="text-3xl font-bold text-white mb-4">Strategic Advisors</h2>
                     <p className="text-slate-400 max-w-2xl mx-auto">
-                        Supported by veterans who have built and run the world's largest transportation networks.
+                        Industry leaders, academic legends, founders, and genuine people shaping the future of transportation and robotics.
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {advisors.map((advisor, idx) => (
                         <div key={idx} className="flex items-center gap-6 bg-[#151e32] p-6 rounded-xl border border-white/5">
                             <img src={advisor.image} alt={advisor.name} className="w-20 h-20 rounded-full object-cover border-2 border-white/10" />

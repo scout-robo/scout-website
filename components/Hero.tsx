@@ -38,14 +38,14 @@ const Hero: React.FC = () => {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-8">
-            Smart Inspections. <br />
+            Network Intelligence. <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-scout-primary to-blue-400">
                 Total Visibility.
             </span>
           </h1>
 
           <p className="text-xl text-slate-300 mb-10 max-w-xl leading-relaxed font-light border-l-4 border-scout-primary pl-6">
-            Turn your existing fleet into an autonomous inspection force. Get complete infrastructure visibility every single day without disrupting operations.
+            Turn your existing fleet into a capital planning solution. Get complete infrastructure visibility every single day without disrupting operations.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-5">

@@ -61,7 +61,7 @@ const SolutionLayout: React.FC<{
 export const AutomatedInspection: React.FC = () => (
     <SolutionLayout
         title="Automated Inspection"
-        subtitle="Replace manual track walks with continuous, high-fidelity data collection from revenue vehicles."
+        subtitle="Augment weekly track walks with continuous, high-fidelity data from revenue vehicles."
         bgImage={SOLUTION_IMAGES.SOLUTION_BG_1}
         features={['Track Geometry (Gauge, Cross-level)', 'Visual Defect Detection', 'Thermal Anomaly Detection', 'Tunnel & Clearance Mapping']}
     >

@@ -20,7 +20,11 @@ export const LOGO_PATH = '/images/logo/scout-logo.png';
 export const TEAM_IMAGES = {
   TEJAS_AGARWAL: '/images/team/tejas-agarwal.jpg',
   ARJUN_NANDA: '/images/team/arjun-nanda.png',
-  // Add more team members as needed
+  KISHORE_PARANTHAMAN: '/images/team/kishore-paranthaman.jpg',
+  ERIK_JAGNANDAN: '/images/team/erik-jagnandan.jpg',
+  RAJATH_CHANDRASHEKAR: '/images/team/rajath-chandrashekar.jpg',
+  JOSH_DEVON: '/images/team/josh devon.jpg',
+  RAHUL_MANGHARAM: '/images/team/rahul.jpg',
 } as const;
 
 // Advisors

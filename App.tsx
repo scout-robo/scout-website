@@ -64,14 +64,14 @@ function App() {
                <div className="container mx-auto px-6 relative z-10 text-center">
                   <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">Deploy Autonomy Today.</h2>
                   <p className="text-slate-400 text-lg mb-12 max-w-2xl mx-auto">
-                    Ready to stop manual inspections? Let's discuss a pilot program for your fleet.
+                    Ready to augment manual inspections? Let's discuss a pilot program for your fleet.
                   </p>
                   <div className="flex flex-col sm:flex-row justify-center gap-4">
                       <button className="bg-scout-primary text-white px-10 py-4 font-bold text-lg hover:bg-blue-600 transition-all duration-300">
-                        <a href="https://calendly.com/tejas-ag/30min" target="_blank" rel="noopener noreferrer">SCHEDULE DEMO</a>
+                        <a href="mailto:contact@scoutrobo.com?subject=Request for Demo" target="_blank" rel="noopener noreferrer">SCHEDULE DEMO</a>
                       </button>
                       <button className="bg-transparent border border-white/20 text-white px-10 py-4 font-bold text-lg hover:bg-white/5 transition-all duration-300">
-                        <a href="mailto:contact@scoutrobo.com" target="_blank" rel="noopener noreferrer">CONTACT SALES</a>
+                        <a href="mailto:contact@scoutrobo.com?subject=Request for Sales Information" target="_blank" rel="noopener noreferrer">CONTACT SALES</a>
                       </button>
                   </div>
                </div>
