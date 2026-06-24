@@ -51,7 +51,9 @@ const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-5">
             <button className="flex items-center justify-center gap-3 bg-scout-primary hover:bg-blue-600 text-white px-8 py-4 font-bold text-lg rounded-lg transition-all shadow-xl shadow-scout-primary/20 hover:scale-105">
               <Calendar className="w-5 h-5" />
-              <a href="https://calendly.com/tejas-ag/30min" >Book A Demo</a>
+              <a href="mailto:contact@scoutrobo.com?subject=Request for Demo">
+                Book A Demo
+              </a>
             </button>
             <button className="flex items-center justify-center gap-3 bg-white/5 hover:bg-white/10 text-white border border-white/10 px-8 py-4 font-bold text-lg rounded-lg transition-all backdrop-blur-sm group">
               <Play className="w-5 h-5 fill-current" />
